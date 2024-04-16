@@ -72,7 +72,7 @@ const EditBlogComponent = ({ id }) => {
     if (id && authToken) {
       fetchSingleBlog();
     }
-  }, [authToken, id, fetchSingleBlog]);
+  }, [authToken, id,]);
 
   const handleSubmit = () => create(`blog/${id}`, { ..._values, image: _values.preImage ? _values.preImage : _values.image, categories: cats });
 
