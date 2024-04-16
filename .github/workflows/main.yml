@@ -15,7 +15,7 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           port: 22
           script: |
-            cd /home/hadi/test-13
+            cd /root/hadi/test-13
             git pull
             npm install -f
             npm run build
