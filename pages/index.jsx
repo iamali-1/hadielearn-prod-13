@@ -35,7 +35,7 @@ const Home = ({ courses }) => {
       <Stats2 />
       <HomeAboutFeatures />
       <HomeAbout />
-      <CourseCats />
+      {/* <CourseCats /> */}
       <div style={{ marginTop: screen.md ? "80px" : !screen.md && "80px" }}>
         <HomePrograms courses={courses} />
       </div>
