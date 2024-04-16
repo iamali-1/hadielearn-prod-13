@@ -1,10 +1,9 @@
 import Footer from "@/components/ui/common/Footer";
 import HomePrograms from "@/components/ui/home/HomePrograms";
-import Stats from "@/components/ui/common/Stats";
+// import Stats from "@/components/ui/common/Stats";
 import { useScreens } from "@/components/ui/common/screens";
 import { API } from "@/config/APIs";
 import axios from "axios";
-import Image from "next/image";
 import React from "react";
 import ResponsiveHero from "@/components/ui/home/ResponsiveHero";
 import HomeAbout from "@/components/ui/home/HomeAbout";
@@ -39,7 +38,7 @@ const Home = ({ courses }) => {
       <div style={{ marginTop: screen.md ? "80px" : !screen.md && "80px" }}>
         <HomePrograms courses={courses} />
       </div>
-      <CTA />
+      <div className="mt-5">  <CTA /></div>
       <Testimonials />
       <Brands />
 

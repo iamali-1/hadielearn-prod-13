@@ -2,11 +2,11 @@
 
 import axios from "axios";
 import React, { useEffect } from "react";
-import TopHeader from "@/components/ui/common/TopHeader";
 import PageHeading from "@/components/ui/common/PageHeading";
 import { API } from "@/config/APIs";
 import Footer from "@/components/ui/common/Footer";
 import BlogDetailItem from "@/components/ui/blogs/BlogDetailItem";
+import Tops from "@/components/ui/common/Tops";
 
 const BlogDetail = ({ blog, categories, recentBlogs, mostView }) => {
   const viewCount = async (x) => {
@@ -24,18 +24,17 @@ const BlogDetail = ({ blog, categories, recentBlogs, mostView }) => {
 
   return (
     <>
-      {/* <Tops
-        headTitle={blog?.seoTitle ? blog?.seoTitle : "Read this blog to explore more about Hadi E-learning"}
-        headDesc={blog?.metaDescription ? blog?.metaDescription : "Here is a blog to have insightful knowledge of Hadi E-learning and the various courses it is offering to you."}
+      <Tops
+        header
+        title={blog?.seoTitle ? blog?.seoTitle : "Read this blog to explore more about Hadi E-learning"}
+        desc={blog?.metaDescription ? blog?.metaDescription : "Here is a blog to have insightful knowledge of Hadi E-learning and the various courses it is offering to you."}
+
         conLink={`https://hadielearning.com/blog/${blog.slug}`}
-        breadTitle={blog?.title}
-        breadSubTtile={blog?.title}
-        image={"/assets/images/bread.jpg"}
-      /> */}
-      <TopHeader />
+
+      />
       <PageHeading title={blog?.title} para={blog?.description} />
+
       <BlogDetailItem blog={blog} categories={categories} recentBlogs={recentBlogs} mostView={mostView} />
-      {/* {JSON.stringify(blog)} */}
       <Footer />
     </>
   );

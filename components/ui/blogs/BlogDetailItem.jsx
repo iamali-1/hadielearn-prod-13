@@ -1,12 +1,16 @@
 "use client";
 
 import { toImageUrl } from "@/config/APIs";
-import React from "react";
-import { FaFacebookF, FaTwitter, FaVimeoV } from "react-icons/fa";
 import BlogSidebar from "./BlogsSidebar";
-// import renderHTML from "react-render-html";
+// import * as DOMPurify from 'dompurify';
+
+import renderHTML from "react-render-html";
 
 const BlogDetailItem = ({ blog, categories, recentBlogs, mostView }) => {
+
+  // const sanitizedContent = DOMPurify.default.sanitize(blog?.content);
+
+
   return (
     <>
       <section className="blog__area pt-120 pb-120">
@@ -24,9 +28,11 @@ const BlogDetailItem = ({ blog, categories, recentBlogs, mostView }) => {
                 <div className="blog__text mb-25">
                   <p>{blog?.description}</p>
                 </div>
-                <div className="blog__text mb-25">
-                  <p dangerouslySetInnerHTML={{ __html: blog?.content }} />
+                <div className="blog__text mb-25" >
+                  {renderHTML(blog?.content)}
                 </div>
+
+
 
                 <div className="mb-30">
                   <h5>Tags : </h5>
@@ -39,44 +45,7 @@ const BlogDetailItem = ({ blog, categories, recentBlogs, mostView }) => {
                   </div>
                 </div>
 
-                {/* <div className="blog__share d-flex align-items-center mb-30">
-                  <span>Share : </span>
-                  <div className="blog__social theme-social d-inline-block">
-                    <ul>
-                      <li>
-                        <a href="#">
-                          <i>
-                            <FaFacebookF />
-                          </i>
-                          <i>
-                            <FaFacebookF />
-                          </i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i>
-                            <FaTwitter />{" "}
-                          </i>
-                          <i>
-                            <FaTwitter />{" "}
-                          </i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i>
-                            <FaVimeoV />{" "}
-                          </i>
-                          <i>
-                            <FaVimeoV />{" "}
-                          </i>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div> */}
-                {/* author */}
+
                 <div className="blog__author mb-95 d-sm-flex">
                   <div className="blog__author-img mr-30">
                     <img src={blog?.postedBy?.image?.url} height={"90px"} alt="" />
