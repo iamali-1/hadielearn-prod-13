@@ -38,7 +38,7 @@ const Home = ({ courses }) => {
       <div style={{ marginTop: screen.md ? "80px" : !screen.md && "80px" }}>
         <HomePrograms courses={courses} />
       </div>
-      <div className="mt-5">  <CTA /></div>
+      <div className="mb-5">  <CTA /></div>
       <Testimonials />
       <Brands />
 
