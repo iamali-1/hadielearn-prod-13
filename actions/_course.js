@@ -9,28 +9,29 @@ export const useAdminCourses = () => {
   const [loading, setLoading] = useState(false);
 
   const createSubmit = async (_api, values) => {
-    // console.log(
-    //   "state",
-    //   values.title,
-    //   values.overview,
-    //   values.lectures,
-    //   values.whyUs,
-    //   values.prerequisites,
-    //   values.benefits,
-    //   values.marketValue,
-    //   values.courseFor,
-    //   values.duration,
-    //   values.classes,
-    //   values.timming,
-    //   values.startingFrom,
-    //   values.regFee,
-    //   values.courseFee,
-    //   values.image,
-    //   values.instructor,
-    //   { categories: values.categories },
-    //   values.faqs,
-    //   "here"
-    // );
+    console.log(
+      "state",
+      // values.title,
+      // values.overview,
+      // values.lectures,
+      // values.whyUs,
+      // values.prerequisites,
+      // values.benefits,
+      // values.marketValue,
+      // values.courseFor,
+      // values.duration,
+      // values.classes,
+      // values.timming,
+      // values.startingFrom,
+      // values.regFee,
+      // values.courseFee,
+      // values.image,
+      // values.instructor,
+      // { categories: values.categories },
+      values.faqs,
+      "here"
+    );
+
     if (
       !values.title ||
       !values.overview ||
@@ -45,8 +46,8 @@ export const useAdminCourses = () => {
       !values.startingFrom ||
       !values.image ||
       !values.instructor ||
-      !values.categories ||
-      !values.faqs ||
+      values.categories.length === 0 ||
+      values.faqs.length === 0 ||
       !values.seoTitle ||
       !values.metaDescription
     ) {

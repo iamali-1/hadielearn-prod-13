@@ -4,7 +4,7 @@ import { API } from "@/config/APIs";
 import { useAuth } from "@/context/authContext";
 import { Card } from "antd";
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import CourseForm from "./course/CourseForm";
 import PanelHeading from "@/components/ui/common/PanelHeading";
 import { EditFilled } from "@ant-design/icons";
@@ -49,7 +49,7 @@ const EditCourseComponent = ({ id }) => {
   const [faqs, setFaqs] = useState([]);
   const { createSubmit, loading } = useAdminCourses();
 
-  const fetchSingleCourse = async () => {
+  const fetchSingleCourse = useCallback(async () => {
     try {
       setSingleLoading(true);
 
@@ -82,13 +82,13 @@ const EditCourseComponent = ({ id }) => {
       setSingleLoading(false);
       console.log(error);
     }
-  };
+  }, [id && authToken])
 
   useEffect(() => {
     if (id && authToken) {
       fetchSingleCourse();
     }
-  }, [id && authToken, fetchSingleCourse]);
+  }, [fetchSingleCourse]);
 
   // functions that can be in one place
 

@@ -22,7 +22,7 @@ export const useCreateWorkshop = () => {
       !values.pascodeId ||
       !values.meetingTiming ||
       !values.tags ||
-      !values.categories
+      values.categories.length === 0
     ) {
       toast.error("All Fields are required**", { position: "bottom-center" });
       return;

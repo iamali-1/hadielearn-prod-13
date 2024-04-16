@@ -1,7 +1,7 @@
 import { useCreateBlog } from "@/actions/_blogs";
 import { useCategory } from "@/actions/_category";
 import { useAuth } from "@/context/authContext";
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import toast from "react-hot-toast";
 import BlogForm from "./blog/BlogForm";
 import { API } from "@/config/APIs";
@@ -24,7 +24,7 @@ const EditBlogComponent = ({ id }) => {
   const authToken = auth && auth.token;
   const [_values, _setValues] = useState(initialState);
   const [cats, setCats] = useState([]);
-  const { create, loading } = useCreateBlog();
+  const { create, loading } = useCreateBlog("edit");
   const [singleLoading, setSingleLoading] = useState(false);
 
   const changeHandler = (e) => {
@@ -36,7 +36,7 @@ const EditBlogComponent = ({ id }) => {
     }
   };
 
-  const fetchSingleBlog = async () => {
+  const fetchSingleBlog = useCallback(async () => {
     try {
       setSingleLoading(true);
       const { data } = await axios.get(`${API}/admin/blog/${id}`, {
@@ -66,13 +66,13 @@ const EditBlogComponent = ({ id }) => {
       setSingleLoading(false);
       toast.error("Failed, try again.");
     }
-  };
+  }, [authToken, id])
 
   useEffect(() => {
     if (id && authToken) {
       fetchSingleBlog();
     }
-  }, [authToken, id,]);
+  }, [fetchSingleBlog,]);
 
   const handleSubmit = () => create(`blog/${id}`, { ..._values, image: _values.preImage ? _values.preImage : _values.image, categories: cats });
 

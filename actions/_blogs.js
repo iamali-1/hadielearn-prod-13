@@ -4,9 +4,11 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 
-export const useCreateBlog = () => {
+export const useCreateBlog = (from = "create") => {
   const [auth] = useAuth();
   const [loading, setLoading] = useState(false);
+
+  console.log("from", from);
 
   const create = async (_api, values) => {
     const _formData = new FormData();
@@ -25,20 +27,40 @@ export const useCreateBlog = () => {
 
     try {
       setLoading(true);
-      const { data } = await axios.post(`${API}/${_api}`, _formData, {
-        headers: {
-          Authorization: auth && auth.token && `Bearer ${auth?.token}`,
-        },
-      });
-
-      if (data?.error) {
-        toast.error(data.error, { position: "bottom-center" });
-        setLoading(false);
-      } else {
-        toast.success("Action is done successfully", {
-          position: "bottom-center",
+      if (from === "create") {
+        const { data } = await axios.post(`${API}/${_api}`, _formData, {
+          headers: {
+            Authorization: auth && auth.token && `Bearer ${auth?.token}`,
+          },
         });
-        setLoading(false);
+
+        if (data?.error) {
+          toast.error(data.error, { position: "bottom-center" });
+          setLoading(false);
+        } else {
+          toast.success("Action is done successfully", {
+            position: "bottom-center",
+          });
+          setLoading(false);
+        }
+      }
+
+      if (from === "edit") {
+        const { data } = await axios.put(`${API}/${_api}`, _formData, {
+          headers: {
+            Authorization: auth && auth.token && `Bearer ${auth?.token}`,
+          },
+        });
+
+        if (data?.error) {
+          toast.error(data.error, { position: "bottom-center" });
+          setLoading(false);
+        } else {
+          toast.success("Action is done successfully", {
+            position: "bottom-center",
+          });
+          setLoading(false);
+        }
       }
     } catch (err) {
       console.log(err);
