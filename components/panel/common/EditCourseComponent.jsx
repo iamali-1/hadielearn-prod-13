@@ -139,6 +139,9 @@ const EditCourseComponent = ({ id }) => {
     setFaqs(updatedFAQs);
   };
 
+
+  console.log(faqs, "here are the faqs")
+
   return (
     <Card>
       <PanelHeading Icon={<EditFilled />} title={"Course Edit"} para={"Note** please upload just webp images, that will benifical for hadi elearning website."} />

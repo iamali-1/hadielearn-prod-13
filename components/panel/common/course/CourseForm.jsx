@@ -488,7 +488,7 @@ const CourseForm = ({
                   className="form-control"
                   name="question"
                   placeholder="Question"
-                  value={faqs.question}
+                  value={lecture.question}
                   onChange={(e) => handleFaqsChange(index, e)}
                 />
               </div>
