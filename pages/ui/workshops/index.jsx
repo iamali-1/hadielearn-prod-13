@@ -65,7 +65,7 @@ const Workshops = ({ workshops }) => {
                   <div key={index} className="blog__item-2 mb-50 fix">
                     <div className={`blog__thumb-2  w-img fix p-relative`}>
                       <Link href={`/workshop-detail/${x.slug} `}>
-                        {x.image.url.includes("uploads") ? <img src={toImageUrl(x.image?.url)} alt="workshop_image" /> : <img src={x.image?.url} alt="workshop_image" />}
+                        {x.image?.url?.includes("uploads") ? <img src={toImageUrl(x.image?.url)} alt="workshop_image" /> : <img src={x.image?.url} alt="workshop_image" />}
                       </Link>
                     </div>
 

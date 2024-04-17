@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import WorkshopForm from "./workshop/WorkshopForm";
 import { useCreateWorkshop } from "@/actions/_workshops";
 
+
 const initValues = {
   title: "",
   breadTitle: "",
@@ -9,7 +10,7 @@ const initValues = {
   outlines: "",
   image: "",
   conclusion: "",
-  dateAndTime: "",
+  dateAndTime: new Date(),
   instructor: "",
   zoomLink: "",
   meetingId: "",

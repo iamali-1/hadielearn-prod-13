@@ -4,7 +4,7 @@ import { useCreateWorkshop } from "@/actions/_workshops";
 import { API } from "@/config/APIs";
 import { useAuth } from "@/context/authContext";
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import WorkshopForm from "./workshop/WorkshopForm";
 
 const initValues = {
@@ -40,10 +40,8 @@ const EditWorkshopComponent = ({ id }) => {
     }
   };
 
-  const fetchSingleWorkshop = async () => {
+  const fetchSingleWorkshop = useCallback(async () => {
     try {
-      // setSingleLoading(true);
-
       const { data } = await axios.get(`${API}/admin/edit/workshop/${id}`);
       _setValues(data);
       _setValues((prev) => ({ ...prev, preImage: data?.image }));
@@ -52,22 +50,18 @@ const EditWorkshopComponent = ({ id }) => {
       let arr = [];
       data.categories.map((c) => arr.push(c.name));
       setCats(arr);
-      if (Array.isArray(data?.tags)) setTags(data?.tags.join(", "));
+      // if (Array.isArray(data?.tags)) setTags(data?.tags.join(", "));
 
-      // console.log
-
-      // setSingleLoading(false);
     } catch (error) {
-      // setSingleLoading(false);
       console.log(error);
     }
-  };
+  }, [authToken, id]);
 
   useEffect(() => {
     if (id && authToken) {
       fetchSingleWorkshop();
     }
-  }, [authToken, id, fetchSingleWorkshop]);
+  }, [fetchSingleWorkshop]);
 
   return (
     <WorkshopForm

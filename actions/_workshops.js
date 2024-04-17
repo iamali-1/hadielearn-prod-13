@@ -13,7 +13,7 @@ export const useCreateWorkshop = () => {
       !values.title ||
       !values.content ||
       !values.outlines ||
-      !values.image ||
+      // !values.image ||
       !values.conclusion ||
       !values.dateAndTime ||
       !values.instructor ||
@@ -33,7 +33,7 @@ export const useCreateWorkshop = () => {
     formData.append("title", values.title);
     formData.append("content", values.content);
     formData.append("outlines", values.outlines);
-    formData.append("image", values.image); // Assuming `image` is the File object from an input type="file"
+    // formData.append("image", values.image);
     formData.append("conclusion", values.conclusion);
     formData.append("dateAndTime", values.dateAndTime);
     formData.append("instructor", values.instructor);
@@ -45,6 +45,15 @@ export const useCreateWorkshop = () => {
     values.categories.forEach((category) => {
       formData.append("categories", category);
     });
+
+    if (values?.preImage) {
+      console.log("from  pre image");
+    }
+
+    if (values?.image) {
+      // console.log(values?.image);
+      formData.append("image", values.image);
+    }
 
     try {
       setLoading(true);

@@ -9,6 +9,14 @@ import moment from "moment";
 import dynamic from "next/dynamic";
 import React, { useMemo, useState } from "react";
 import "react-quill/dist/quill.snow.css";
+import DateTimePicker from "react-datetime-picker";
+
+
+import 'react-datetime-picker/dist/DateTimePicker.css';
+import 'react-calendar/dist/Calendar.css';
+import 'react-clock/dist/Clock.css';
+
+
 
 const WorkshopForm = ({ _values, _setValues, handleChange, cats, setCats, from, loading, handleSubmit, workshopId }) => {
   const Editor = useMemo(() => dynamic(() => import("react-quill"), { ssr: false }), []);
@@ -17,9 +25,13 @@ const WorkshopForm = ({ _values, _setValues, handleChange, cats, setCats, from, 
 
   const removeImage = () => _setValues((prev) => ({ ...prev, image: "" }));
 
+  const handleDateChange = (date) => {
+    _setValues((prev) => ({ ...prev, dateAndTime: date }));
+  };
+
   return (
     <>
-      {JSON.stringify(_values.image)}
+      {/* {JSON.stringify(_values.image)} */}
       <div className="form-group py-2">
         <label for="exampleFormControlInput1"> Breadcrumb Title</label>
         <input
@@ -45,7 +57,6 @@ const WorkshopForm = ({ _values, _setValues, handleChange, cats, setCats, from, 
           onChange={handleChange}
           type="file"
           accept="images/*"
-          // hidden
           className="form-control"
           id="exampleFormControlInput1"
         />
@@ -108,13 +119,17 @@ const WorkshopForm = ({ _values, _setValues, handleChange, cats, setCats, from, 
       <div className="form-group py-2">
         <label for="exampleFormControlInput1">Date and Time</label>
 
-        <DatePicker
+
+
+
+
+        <DateTimePicker
+          type="date"
           className="form-control"
-          format="YYYY-MM-DD HH:mm:ss"
-          value={moment(_values.dateAndTime)}
-          onChange={(date, dateString) => {
-            _setValues((prev) => ({ ...prev, dateAndTime: dateString }));
-          }}
+
+          name="dateAndTime"
+          value={_values?.dateAndTime}
+          onChange={handleDateChange}
         />
       </div>
       {instLoading && "loading..."}
@@ -173,7 +188,7 @@ const WorkshopForm = ({ _values, _setValues, handleChange, cats, setCats, from, 
       </div>
 
       <div className="form-group py-2">
-      {cats?.length === 0 || cats.length === 1 && <CatsAlert />}
+        {cats?.length === 0 || cats.length === 1 && <CatsAlert />}
         <label for="exampleFormControlInput1">Categories</label>
         <Select mode="multiple" allowClear style={{ width: "100%" }} placeholder="Please select" onChange={(v) => setCats(v)}>
           {categoriesList.map((item) => (
