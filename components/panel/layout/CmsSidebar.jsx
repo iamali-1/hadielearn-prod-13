@@ -28,7 +28,7 @@ const CmsSidebar = ({ from = "without-sidebar" }) => {
       <div className={`${from === "sidebar" ? "text-start" : "text-center"}`}>
         <Logo />
       </div>
-      <Menu.Item className="mt-3" icon={<HomeOutlined />} style={active("/", router) ? navsStyle : {}}>
+      <Menu.Item className="mt-3" icon={<HomeOutlined />} onClick={() => router.push("/")} style={active("/", router) ? navsStyle : {}}>
         Home
       </Menu.Item>
       <Menu.Item className="mt-1" icon={<MdOutlineDashboardCustomize />}>

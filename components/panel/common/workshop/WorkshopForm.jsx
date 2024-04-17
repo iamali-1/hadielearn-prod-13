@@ -108,7 +108,7 @@ const WorkshopForm = ({ _values, _setValues, handleChange, cats, setCats, from, 
 
       <div className="form-group py-2">
         <label for="exampleFormControlInput1">Outlines</label>
-        <Editor placeholder="Overview" value={_values.outlines} onChange={(e) => _setValues((prev) => ({ ...prev, outlines: e }))} />
+        <Editor placeholder="Outlines" value={_values.outlines} onChange={(e) => _setValues((prev) => ({ ...prev, outlines: e }))} />
       </div>
 
       <div className="form-group py-2">
@@ -146,9 +146,9 @@ const WorkshopForm = ({ _values, _setValues, handleChange, cats, setCats, from, 
       </div>
 
       <div className="form-group py-2">
-        <label for="exampleFormControlInput1">Poplar Tags</label>
+        <label for="exampleFormControlInput1">Popular Tags</label>
         <input type="text" className="form-control" placeholder="Tags" name="tags" value={_values.tags} onChange={handleChange} />
-        <small className="form-text">Please use comma separated values (eg. #TREND,#DESIGNING,#JAVSSCRIPT,#EARNING,#EDUCATION)</small>
+        <small className="form-text">Please use comma separated values (eg. #TREND,#DESIGNING,#JAVASCRIPT,#EARNING,#EDUCATION)</small>
       </div>
 
       <hr />
@@ -168,7 +168,7 @@ const WorkshopForm = ({ _values, _setValues, handleChange, cats, setCats, from, 
 
         <div className="col-md-6">
           <div className="form-group py-2">
-            <label for="exampleFormControlInput1">Pascode Id</label>
+            <label for="exampleFormControlInput1">Passcode Id</label>
             <input className="form-control" type="text" id="exampleFormControlInput1" name="pascodeId" value={_values.pascodeId} onChange={handleChange} />
           </div>
         </div>

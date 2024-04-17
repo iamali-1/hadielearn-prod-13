@@ -9,6 +9,7 @@ import CmsSidebar from "./CmsSidebar";
 import AdminSidebar from "./AdminSidebar";
 import { MdClose } from "react-icons/md";
 import { _useCommon } from "@/actions/layouts/_common";
+import { useRouter } from "next/router";
 const { Sider, Header, Content } = Layout;
 const { useBreakpoint } = Grid;
 
@@ -19,6 +20,7 @@ const PanelLayout = ({ children, api }) => {
 
   const { loading } = useGetUser(api);
   const breakpoints = useBreakpoint();
+
 
   const items = [
     {

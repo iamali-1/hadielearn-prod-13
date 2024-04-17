@@ -102,7 +102,7 @@ export default function TopHeader() {
           <span>Workshops</span>
           <span>How it works?</span>
           <span>Blogs</span>
-{/* 
+          {/* 
           {!auth?.token && <Btn className="myBtn" icon={<CiLogin size={20} className="textColor" />}>
             <Link href={'/enroll/program'}>Enroll Now</Link>
           </Btn>}

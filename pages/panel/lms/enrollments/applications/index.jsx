@@ -60,7 +60,7 @@ const EnrollmentsApplications = () => {
     }
   };
 
-  
+
   useEffect(() => {
     if (authToken) fetchingData();
   }, [authToken, searchInput, fromDate, endDate, enrollToSelect, currentPage, courseSelect, workshopSelect, limit,]);
@@ -100,7 +100,7 @@ const EnrollmentsApplications = () => {
           <PanelHeading
             title={"All enrollment list"}
             Icon={<RiListSettingsFill />}
-            para={"You can filter enrollment application by User name, Email, Phone number, Course. Or you can select any program or workshop."}
+            para={"You can filter enrollment applications by User name, Email, Phone number and Courses. Or you can select any program or workshop."}
           />
         </Col>
         <Col sm={24} lg={12}>
