@@ -9,6 +9,7 @@ import CourseForm from "./course/CourseForm";
 import PanelHeading from "@/components/ui/common/PanelHeading";
 import { EditFilled } from "@ant-design/icons";
 import { useAdminCourses } from "@/actions/_course";
+import toast from "react-hot-toast";
 
 const initDays = {
   monday: false,
@@ -95,6 +96,11 @@ const EditCourseComponent = ({ id }) => {
   const changeHandler = (e) => {
     if (e.target.files) {
       // Update the state with the new file
+      const selectedFile = e.target.files[0];
+      if (selectedFile.size > 1024 * 1024) { // 1MB limit
+        toast.error('Image size must be less than 1MB');
+        return;
+      }
       _setValues((prevValues) => ({ ...prevValues, image: e.target.files[0] }));
     } else {
       // For other inputs, update the state normally

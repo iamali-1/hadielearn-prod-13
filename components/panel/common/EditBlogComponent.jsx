@@ -29,6 +29,11 @@ const EditBlogComponent = ({ id }) => {
 
   const changeHandler = (e) => {
     if (e.target.files) {
+      const selectedFile = e.target.files[0];
+      if (selectedFile.size > 1024 * 1024) { // 1MB limit
+        toast.error('Image size must be less than 1MB');
+        return;
+      }
       _setValues((prevValues) => ({ ...prevValues, image: e.target.files[0] }));
     } else {
       const { name, value } = e.target;
