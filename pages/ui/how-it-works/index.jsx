@@ -1,12 +1,19 @@
 import CTA from "@/components/ui/common/CTA";
 import Footer from "@/components/ui/common/Footer";
 import PageHeading from "@/components/ui/common/PageHeading";
-import React from "react";
+import React, { useState } from "react";
 import FAQs from "../faqs";
-import Price from "@/components/ui/common/Price";
+// import Price from "@/components/ui/common/Price";
 import Tops from "@/components/ui/common/Tops";
+import FreeFlow from "@/components/ui/how-it-works/FreeFlow";
+import AdvFlow from "@/components/ui/how-it-works/AdvFlow";
 
 const HowItWorks = () => {
+
+  const [which, setWhich] = useState('adv')
+  const active = { backgroundColor: "#0f3f5d", color: "white" }
+
+
   return (
     <>
       <Tops
@@ -28,99 +35,16 @@ const HowItWorks = () => {
         }
       />
       <div className="container pt-90">
-        <div className="boxes">
-          <div id="leftBox">
-            <h1>01</h1>
-            <div className="left-box-content">
-              <h2 className="myH2">Explore our available program list</h2>
-            </div>
-            <div className="left-box-image">
-              <img src="/images/how-it-works/1st.png" />
-            </div>
-          </div>
 
-          <div id="rightBox">
-            <div className="right-box-image">
-              <img src="/images/how-it-works/2nd.png" />
-            </div>
-
-            <div className="right-box-content">
-              <h2 className="myH2">Chat with our student coordinator to learn more about your options</h2>
-            </div>
-            <h1>02</h1>
-          </div>
-
-          <div id="leftBox2">
-            <h1>03</h1>
-            <div className="left-box-content2">
-              <h2 className="myH2">Choose the program that suits you the best </h2>
-            </div>
-            <div className="left-box-image2">
-              <img src="/images/how-it-works/3rd.png" />
-            </div>
-          </div>
-
-          <div id="rightBox">
-            <div className="right-box-image2">
-              <img src="/images/how-it-works/4th.png" />
-            </div>
-
-            <div className="right-box-content">
-              <h2 className="myH2">Fill out the registration form and get the link to the relevant entry test.</h2>
-            </div>
-
-            <h1>04</h1>
-          </div>
-
-          <div id="leftBox3">
-            <h1>05</h1>
-            <div className="left-box-content3">
-              <h2 className="myH2">Take the Test</h2>
-            </div>
-            <div className="left-box-image3">
-              <img src="/images/how-it-works/5th.png" />
-            </div>
-          </div>
-
-          <div id="rightBox-pass">
-            <div className="right-box-pass-image2">
-              <img src="/images/how-it-works/Pass.png" />
-            </div>
-
-            <div className="right-box-content-pass">
-              <div className="">
-                <h2 className="text-start">Pass</h2>
-                <h5>You will be added to the waitlist and will be entertained on a first come first basis.</h5>
-              </div>
-            </div>
-
-            <h1>5.1</h1>
-          </div>
-
-          <div id="leftBox3-fail">
-            <h1>5.2</h1>
-            <div className="left-box-content3-fail">
-              {/* <a href="#leftBox2-fail"> */}
-              <h2 className="myH2">Fail</h2>
-              <h5 style={{ maxWidth: "300px" }}>Dont worry! Get back to step 5 and reattempt.</h5>
-              {/* </a> */}
-            </div>
-            <div className="left-box-image3-fail">
-              <img src="/images/how-it-works/Fail.png" />
-            </div>
-          </div>
-
-          <div id="rightBox3">
-            <div className="right-box-image3">
-              <img src="/images/how-it-works/6th.png" />
-            </div>
-
-            <div className="right-box-content3">
-              <h2 className="myH2">Learn about the course outline, outcomes, and schedules</h2>
-            </div>
-            <h1>06</h1>
+        <div className="d-flex justify-content-center align-items-center" role="button">
+          <div className="rounded-3 d-flex justify-content-between align-items-center gap-3" >
+            <div className="py-2 px-3 rounded-3" style={which === 'free' ? active : {}} onClick={() => setWhich('free')}>Free Courses</div>
+            <div className="py-2 px-3 rounded-3" style={which === 'adv' ? active : {}} onClick={() => setWhich('adv')}>Advance Courses</div>
           </div>
         </div>
+
+        {which === "free" && <FreeFlow />}
+        {which === "adv" && <AdvFlow />}
 
         <div
           style={{

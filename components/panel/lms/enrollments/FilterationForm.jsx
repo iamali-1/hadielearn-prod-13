@@ -1,14 +1,17 @@
 import Btn from "@/components/ui/common/Btn";
 import { styles } from "@/config/styles";
+import { CheckOutlined, } from "@ant-design/icons";
 import { Card, Col, DatePicker, Input, Row, Select, Typography } from "antd";
 import React from "react";
 import { BiExport, BiRefresh, BiReset } from "react-icons/bi";
+import { RxCross1 } from "react-icons/rx";
 
 const { Option } = Select;
 
 const FilterationForm = ({
   list,
   _values,
+
   _setValues,
   searchInput,
   fromDate,
@@ -24,6 +27,7 @@ const FilterationForm = ({
   exportToCSV,
   loading,
   Refresh,
+  totalDataCount
 }) => {
   return (
     <Card>
@@ -87,7 +91,12 @@ const FilterationForm = ({
           )
         )}
         <Col sm={24} lg={4} className="m-1 ">
-          <Select style={{ ...styles.inputBox, width: "100%" }} placeholder="Choose, Limit for export data">
+          <Select
+            value={_values.limit}
+            onChange={(e) => {
+              _setValues(prev => ({ ...prev, limit: e }));
+            }}
+            style={{ ...styles.inputBox, width: "100%" }} placeholder="Choose, Limit for export data">
             <Option value={0}>Limit Export</Option>
             <Option value={10}>10 - limit</Option>
             <Option value={20}>20 - limit</Option>
@@ -98,6 +107,7 @@ const FilterationForm = ({
             <Option value={5000}>5000 - limit</Option>
             <Option value={10000}>10000 - limit</Option>
             <Option value={15000}>15000 - limit</Option>
+            <Option value={totalDataCount}>{totalDataCount}</Option>
           </Select>
         </Col>
       </Row>
@@ -112,8 +122,16 @@ const FilterationForm = ({
         <Btn className="myBtn" loading={loading} icon={<BiRefresh size={20} className="textColor" />} onClick={Refresh}>
           Refresh
         </Btn>
+
+        {_values.todays === 'no' && <Btn className="myBtn-disable" loading={loading} icon={<CheckOutlined size={20} className="textColor" />} onClick={() => _setValues((prev) => ({ ...prev, todays: "yes" }))}>
+          Todays Data
+        </Btn>}
+
+        {_values.todays === 'yes' && <Btn className="myBtn" loading={loading} icon={<RxCross1 size={20} className="textColor" />} onClick={() => _setValues((prev) => ({ ...prev, todays: "no" }))}>
+          Todays Data
+        </Btn>}
       </div>
-    </Card>
+    </Card >
   );
 };
 

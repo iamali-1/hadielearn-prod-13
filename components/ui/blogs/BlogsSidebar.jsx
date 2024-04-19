@@ -14,13 +14,13 @@ const BlogSidebar = ({ RecentBlogs, Categories, handleSearch, searchQuery, setSe
                   <form onSubmit={handleSearch}>
                     <input type="text" placeholder="Search..." value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} />
                     <button type="button">
-                      {/* {loading ? (
-                        <p>Loading..</p>
+                      {loading ? (
+                        <p>....</p>
                       ) : (
                         <i>
                           <FaSearch />
                         </i>
-                      )} */}
+                      )}
                     </button>
                   </form>
                 </div>

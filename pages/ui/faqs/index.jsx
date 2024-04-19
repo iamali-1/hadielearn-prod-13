@@ -92,7 +92,7 @@ Flexibility"
       <TopHeader />
 
       <div className="container">
-        <section className={`faq__area pb-5 pt-${component ? 120 : 20}`} style={{ marginTop: "150px" }}>
+        <section className={`faq__area pb-5 pt-${component ? 0 : 20}`} style={{ marginTop: "150px" }}>
           <div className="row justify-content-center">
             <div className="col-xl-8 col-lg-8 ">
               <div className="mb-4">

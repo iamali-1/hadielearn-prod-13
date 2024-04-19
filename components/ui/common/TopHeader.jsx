@@ -6,10 +6,13 @@ import Logo from "./Logo";
 import Link from "next/link";
 import Btn from "./Btn";
 import { useAuth } from "@/context/authContext";
+import { useActive } from "@/config/helpers/useActive";
+import { useRouter } from "next/router";
 
 
 export default function TopHeader() {
   const [auth] = useAuth();
+
 
   const [open, setOpen] = useState(false);
   const showDrawer = () => {
@@ -28,23 +31,23 @@ export default function TopHeader() {
 
           <div className="d-flex justify-content-center align-items-center">
             <div className="header-nav-list">
-              <div className="d-flex gap-3 px-2 textColorLight" style={{ fontWeight: "550" }}>
-                <span>
+              <div className="d-flex gap-3 px-2 textColorLight" style={{ fontWeight: "500" }}>
+                <span style={useActive("/")} >
                   <Link href={"/"}> Home </Link>
                 </span>
-                <span>
+                <span style={useActive("about-us")} >
                   <Link href={"/about-us"}> About </Link>
                 </span>
-                <span>
+                <span style={useActive("programs")} >
                   <Link href={"/programs"}> Programs </Link>
                 </span>
-                <span>
+                <span style={useActive("workshops")} >
                   <Link href={"/workshops"}> Workshops </Link>
                 </span>
-                <span>
+                <span style={useActive("how-it-works")} >
                   <Link href={"/how-it-works"}> How it works?</Link>
                 </span>
-                <span>
+                <span style={useActive("blogs")} >
                   <Link href={"/blogs"}> Blogs </Link>
                 </span>
               </div>

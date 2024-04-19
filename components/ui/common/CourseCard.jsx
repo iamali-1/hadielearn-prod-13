@@ -79,7 +79,7 @@ const CourseCard = ({ x }) => {
             </span>
           </div>,
           <span key={"price"} style={{ fontWeight: "bold", color: "#0f3f5d" }}>
-            {x._doc.regFee == 0 && "Free"} {x._doc.regFee != 0 && "PKR" + " " + x._doc.regFee?.toLocaleString()}
+            {x._doc.courseFee == 0 && "Free"} {x._doc.courseFee != 0 && "PKR" + " " + x._doc.courseFee?.toLocaleString()}
           </span>,
         ]}
       >

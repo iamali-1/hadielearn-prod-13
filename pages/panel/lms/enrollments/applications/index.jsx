@@ -27,6 +27,7 @@ const initValues = {
   workshopSelect: "",
   limit: 10,
   enrollments: [],
+  todays: "no"
 };
 
 const EnrollmentsApplications = () => {
@@ -37,7 +38,7 @@ const EnrollmentsApplications = () => {
   const [_values, _setValues] = useState(initValues);
   const [currentObj, setCurrentObj] = useState({});
   const [open, setOpen] = useState(false);
-  const { searchInput, fromDate, endDate, enrollToSelect, currentPage, courseSelect, workshopSelect, limit, enrollments, totalPages, totalDataCount } = _values;
+  const { searchInput, fromDate, endDate, enrollToSelect, currentPage, courseSelect, workshopSelect, limit, enrollments, totalPages, totalDataCount, todays } = _values;
 
   const { list, fetchingCourses, fetchingWorkshops, listLoading } = _fetchWorkshopOrCourse(enrollToSelect);
 
@@ -45,7 +46,7 @@ const EnrollmentsApplications = () => {
     try {
       setLoading(true);
       const { data } = await axios.get(
-        `${API}/fetch/enrollments?page=${currentPage}&limit=${limit}&search=${searchInput}&fromDate=${fromDate}&endDate=${endDate}&enrollTo=${enrollToSelect}&course=${courseSelect}&workshop=${workshopSelect}`,
+        `${API}/fetch/enrollments?page=${currentPage}&limit=${limit}&search=${searchInput}&fromDate=${fromDate}&endDate=${endDate}&enrollTo=${enrollToSelect}&course=${courseSelect}&workshop=${workshopSelect}&todays=${todays}`,
         {
           headers: {
             Authorization: `Bearer ${auth?.token}`,
@@ -63,7 +64,7 @@ const EnrollmentsApplications = () => {
 
   useEffect(() => {
     if (authToken) fetchingData();
-  }, [authToken, searchInput, fromDate, endDate, enrollToSelect, currentPage, courseSelect, workshopSelect, limit,]);
+  }, [authToken, searchInput, fromDate, endDate, enrollToSelect, currentPage, courseSelect, workshopSelect, limit, todays]);
 
   const Reset = () => {
     _setValues(initValues);
@@ -92,6 +93,9 @@ const EnrollmentsApplications = () => {
   const Refresh = () => {
     fetchingData();
   };
+
+
+
 
   return (
     <LMSLayout>
@@ -128,6 +132,7 @@ const EnrollmentsApplications = () => {
         exportToCSV={exportToCSV}
         loading={loading}
         Refresh={Refresh}
+        totalDataCount={totalDataCount}
       />
 
       <Card className="my-5">

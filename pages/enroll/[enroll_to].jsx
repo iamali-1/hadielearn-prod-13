@@ -7,9 +7,15 @@ const EnrollmentForm = () => {
   const router = useRouter();
   const { enroll_to } = router.query;
 
+  // const [enroll_to, setEnrollTo] = useState()
   const { enrollInto, userLoading, userByEmail, gettingUserData, handleSubmit, _values, _setValues, submitLoading, finded } = _useEnrollmentForm({ which: enroll_to });
 
   const [currentStep, setCurrentStep] = useState(0);
+
+  // useEffect(() => {
+  //   setEnrollTo(enroll_to?.split("_")[0]);
+  // }, [enroll_to]);
+
 
 
   useEffect(() => {
@@ -55,7 +61,7 @@ const EnrollmentForm = () => {
         <button
           className="z-btn"
           type="submit"
-          onClick={(e) => handleSubmit(e, _values)}
+          onClick={(e) => handleSubmit(e, { ..._values, enrollTo: enroll_to })}
         >
           Submit {submitLoading && "..."}
         </button>

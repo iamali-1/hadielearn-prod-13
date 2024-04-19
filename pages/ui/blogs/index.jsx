@@ -23,7 +23,7 @@ const Blogs = ({ initialBlogs, recentBlogs, categories, mostView }) => {
   const [loading, setLoading] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
 
-  const fetchBlogs = useCallback(async () => {
+  const fetchBlogs = async () => {
     setLoading(true);
     try {
       const response = await axios.get(`${API}/blogs/${page}?search=${searchQuery}`);
@@ -33,11 +33,11 @@ const Blogs = ({ initialBlogs, recentBlogs, categories, mostView }) => {
       console.error("Error fetching blogs:", error);
     }
     setLoading(false);
-  }, [page, searchQuery]);
+  };
 
   useEffect(() => {
     if (page !== 1) fetchBlogs();
-  }, [page, fetchBlogs]);
+  }, [page, searchQuery]);
 
   useEffect(() => {
     fetchTotalBlogs();
@@ -52,10 +52,12 @@ const Blogs = ({ initialBlogs, recentBlogs, categories, mostView }) => {
     }
   };
 
-  const handleSearch = async (event) => {
+  const handleSearch = (event) => {
     event.preventDefault();
     setPage(1);
-    await fetchBlogs();
+    fetchBlogs();
+
+
   };
   return (
     <>
