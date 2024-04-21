@@ -91,7 +91,7 @@ const AdvFlow = () => {
         <h1>7</h1>
         <div className="left-box-content3-fail">
           <a href="#leftBox2-fail">
-            <h2> Congratulations! You're now enrolled in the Program</h2>
+            <h2> Congratulations! You are now enrolled in the Program</h2>
 
           </a>
         </div>

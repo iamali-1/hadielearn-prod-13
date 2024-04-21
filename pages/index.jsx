@@ -32,7 +32,7 @@ const Home = ({ courses }) => {
 
 
       <Stats2 />
-      <HomeAboutFeatures />
+      {/* <HomeAboutFeatures /> */}
       <HomeAbout />
       {/* <CourseCats /> */}
       <div style={{ marginTop: screen.md ? "80px" : !screen.md && "80px" }}>

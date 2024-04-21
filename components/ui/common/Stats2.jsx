@@ -35,10 +35,15 @@ const Stats2 = () => {
       <div className="container">
         <div className="p-5 bg-white " style={{ borderRadius: "10px", boxShadow: "0px 10px 15px rgba(0, 0, 0, 0.1), 0px 4px 6px rgba(0, 0, 0, 0.05)" }}>
           <div className="row">
-            <SingleCount counter={1749} title="Enrolled Students" />
+            {/* <SingleCount counter={1749} title="Enrolled Students" />
             <SingleCount counter={796} title="Live Classes" />
             <SingleCount counter={573} title="Student Waitlist" />
-            <SingleCount counter={2739} title="Queries Answered" />
+            <SingleCount counter={2739} title="Queries Answered" /> */}
+
+            <SingleCount counter={1500} title="Live classes" />
+            <SingleCount counter={30000} title="Enrolled Students" />
+            <SingleCount counter={3000} title="Students on waitlist" />
+            <SingleCount counter={50000} title="Queries answered" />
           </div>
         </div>
       </div>
