@@ -10,13 +10,13 @@ jobs:
       - name: executing remote ssh commands using password
         uses: appleboy/ssh-action@master
         with:
-          host: 109.205.178.167
-          username: root
+          host: 161.97.132.169
+          username: hadielearning
           key: ${{ secrets.SSH_KEY }}
           port: 22
           script: |
-            cd /root/hadi/test-13
+            cd /home/hadielearning/hadielearn-prod-13
             git pull
             npm install -f
             npm run build
-            pm2 reload frontend --update-env
+            pm2 reload frontend-new --update-env
