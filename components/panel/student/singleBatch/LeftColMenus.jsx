@@ -28,7 +28,7 @@ const LeftColMenus = ({ setShowCenteral, showCenteral }) => {
             Comments
           </Menu.Item>
           <Menu.Item key="4" className="mt-4" icon={<BackwardOutlined />}>
-            <Link href={auth?.user?.role ? 'instructor' : "/student/learning"}> Back</Link>
+            <Link href={auth?.user?.role === "instructor" ? '/instructor' : "/student/learning"}> Back</Link>
           </Menu.Item>
         </Menu>
       </div>
