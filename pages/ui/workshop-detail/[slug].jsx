@@ -1,6 +1,7 @@
 import Footer from "@/components/ui/common/Footer";
 import PageHeading from "@/components/ui/common/PageHeading";
 import TopHeader from "@/components/ui/common/TopHeader";
+import Tops from "@/components/ui/common/Tops";
 import WriteComments from "@/components/ui/workshops/WriteComments";
 import { API, toImageUrl } from "@/config/APIs";
 import axios from "axios";
@@ -33,7 +34,16 @@ const WorkshopDetails = ({ workshop }) => {
   });
   return (
     <>
-      <TopHeader />
+
+      <Tops header
+        title={selected?.title}
+        desc={
+          "Go through these simple steps and enroll now in the most suitable course to make your mark in this digital world with the best online learning platform, hadi e-learning."
+        }
+        conLink={`https://hadielearning.com/program/${slug}`}
+      />
+
+      {/* <TopHeader /> */}
       {/* <PageHeading title={selected?.title} para={selected?.conclusion} /> */}
 
       <section className="services__details pt-115 pb-100">

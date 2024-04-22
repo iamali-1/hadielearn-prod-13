@@ -1,6 +1,7 @@
 import Footer from "@/components/ui/common/Footer";
 import PageHeading from "@/components/ui/common/PageHeading";
 import TopHeader from "@/components/ui/common/TopHeader";
+import Tops from "@/components/ui/common/Tops";
 import CourseSideBar from "@/components/ui/courses/CourseSideBar";
 import FaqsCourseDetail from "@/components/ui/courses/FaqsCourseDetail";
 import { API, toImageUrl } from "@/config/APIs";
@@ -17,8 +18,17 @@ const ProgramDetail = ({ course }) => {
   const [activeTabs, setactiveTabs] = useState("first");
   return (
     <>
-      <TopHeader />
-      <img src="/images/grid/header-bg.jpg" alt="background" className="position-absolute " style={{ color: "transparent", zIndex: "-1", top: 0, width: "100%" }} />
+      <Tops
+        header
+        grid
+
+        title={course?.seoTitle}
+        desc={course?.metaDescription}
+        conLink={`https://hadielearning.com/program/${slug}`}
+      />
+
+      {/* <TopHeader />
+      <img src="/images/grid/header-bg.jpg" alt="background" className="position-absolute " style={{ color: "transparent", zIndex: "-1", top: 0, width: "100%" }} /> */}
       {/* <PageHeading title={"Data Analytics with Tableau and Power BI"} /> */}
 
       <section className="blog__area pt-120 pb-120">

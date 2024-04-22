@@ -4,6 +4,9 @@ import React from "react";
 import Head from "next/head";
 import TopHeader from "@/components/ui/common/TopHeader";
 import { faqs_data } from "@/data/faqs";
+import { CaretRightOutlined } from "@ant-design/icons";
+import { Collapse } from "antd";
+import Footer from "@/components/ui/common/Footer";
 
 const FAQs = ({ list = 13, component = true }) => {
   return (
@@ -92,7 +95,7 @@ Flexibility"
       <TopHeader />
 
       <div className="container">
-        <section className={`faq__area pb-5 pt-${component ? 0 : 20}`} style={{ marginTop: "150px" }}>
+        <section className={`faq__area pb-5 pt-${component ? 120 : 20}`} style={{ marginTop: "10px" }}>
           <div className="row justify-content-center">
             <div className="col-xl-8 col-lg-8 ">
               <div className="mb-4">
@@ -100,83 +103,26 @@ Flexibility"
               </div>
 
               <div className="faq__accordion p-relative">
-                <div className="accordion" id="accordionExample">
-                  {/* frist */}
 
-                  <div className="accordion-cards accordion-item">
-                    <div className="card-header accordion-header" id="acc_0">
-                      <h5 className="mb-0">
-                        <button className="btn btn-link" data-bs-toggle="collapse" data-bs-target="#collapse_0" aria-expanded="true" aria-controls="collapse_0">
-                          {faqs_data[0]?.question}
-                        </button>
-                      </h5>
-                    </div>
+                <Collapse
+                  items={component ? faqs_data : faqs_data.slice(0, 5)}
+                  defaultActiveKey={['1']}
+                  bordered={false}
+                  size="large"
 
-                    <div id="collapse_0" className="collapse show" aria-labelledby="acc_0" data-bs-parent="#accordionExample">
-                      <div className="card-body accordion-body">
-                        <p>{faqs_data[0]?.answer}</p>
-                      </div>
-                    </div>
-                  </div>
+                  expandIcon={({ isActive }) => <CaretRightOutlined rotate={isActive ? 90 : 0} />}
+                />
 
-                  {faqs_data.slice(1, list).map((x, index) => (
-                    <React.Fragment key={index}>
-                      {index !== 0 && (
-                        <div className="accordion-cards" key={index}>
-                          <div id={`acc_${index}`}>
-                            <h5 className="mb-0">
-                              <button
-                                className="btn btn-link collapsed"
-                                data-bs-toggle="collapse"
-                                data-bs-target={`#collapse_${index}`}
-                                aria-expanded="true"
-                                aria-controls={`collapse_${index}`}
-                              >
-                                {x.question}
-                              </button>
-                            </h5>
-                          </div>
 
-                          <div id={`collapse_${index}`} className="collapse" aria-labelledby={`acc_${index}`} data-bs-parent="#accordionExample">
-                            <div className="card-body accordion-body">
-                              <p>{x.answer}</p>
-                            </div>
-                          </div>
-                        </div>
-                      )}
-                    </React.Fragment>
-                  ))}
 
-                  <div className="accordion-cards">
-                    <div className="card-header" id={`acc_99`}>
-                      <h5 className="mb-0">
-                        <button className="btn btn-link collapsed" data-bs-toggle="collapse" data-bs-target={`#collapse_99`} aria-expanded="true" aria-controls={`collapse_99`}>
-                          What are the benefits of joining Hadi E-Learning?
-                        </button>
-                      </h5>
-                    </div>
 
-                    <div id={`collapse_99`} className="collapse" aria-labelledby={`acc_99`} data-bs-parent="#accordionExample">
-                      <div className="card-body accordion-body">
-                        <div>
-                          <ul>
-                            <li>Quality IT training at a subsidized cost.</li>
-                            <li>A variety of courses to choose from.</li>
-                            <li>Qualified instructors with field experience.</li>
-                            <li>One-on-one coordination with the instructor.</li>
-                            <li>Interactive live classes.</li>
-                            <li>Flexibility</li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
         </section>
       </div>
+
+      {component && <Footer />}
     </>
   );
 };

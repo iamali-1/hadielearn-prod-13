@@ -50,7 +50,7 @@ const Home = ({ courses }) => {
 };
 
 export async function getServerSideProps() {
-  const { data } = await axios.get(`${API}/courses`);
+  const { data } = await axios.get(`${API}/courses2`);
   return {
     props: {
       courses: data.courses,

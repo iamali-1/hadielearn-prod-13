@@ -14,7 +14,7 @@ const initialState = {
   title: "",
   tags: "",
   description: "",
-  content: null,
+  content: "",
   image: "",
   preImage: "",
 };

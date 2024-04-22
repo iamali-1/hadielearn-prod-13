@@ -8,12 +8,10 @@ export const useCreateBlog = (from = "create") => {
   const [auth] = useAuth();
   const [loading, setLoading] = useState(false);
 
-  console.log("from", from);
-
   const create = async (_api, values) => {
     const _formData = new FormData();
     _formData.append("title", values.title);
-    _formData.append("content", values);
+    _formData.append("content", values.content);
     _formData.append("outlines", values.slug);
     _formData.append("image", values.image); // Assuming `image` is the File object from an input type="file"
     _formData.append("description", values.description);

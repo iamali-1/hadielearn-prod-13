@@ -1,11 +1,10 @@
 import CourseCard from "@/components/ui/common/CourseCard";
 import Footer from "@/components/ui/common/Footer";
-import TopHeader from "@/components/ui/common/TopHeader";
 import Tops from "@/components/ui/common/Tops";
 import { API } from "@/config/APIs";
 import { Select } from "antd";
 import axios from "axios";
-import React, { useEffect, useMemo, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FaSearch } from "react-icons/fa";
 
 
@@ -23,9 +22,9 @@ const CourseList = ({ list, searchQuery }) => {
 
   useEffect(() => {
     if (sortBy === 'free') {
-      setfilteredCourses(list.filter(x => x.regFee == 0))
+      setfilteredCourses(list.filter(x => x?.regFee == 0))
     } else if (sortBy === 'paid') {
-      setfilteredCourses(list.filter(x => x.regFee > 0))
+      setfilteredCourses(list.filter(x => x?.regFee > 0))
     } else {
       setfilteredCourses(list)
     }
@@ -33,7 +32,7 @@ const CourseList = ({ list, searchQuery }) => {
 
 
 
-  return <div className="container">
+  return <div className="container pb-5">
     <div className="row mt-100">
       <div className="d-flex justify-content-end mb-3">
         <Select
@@ -48,8 +47,8 @@ const CourseList = ({ list, searchQuery }) => {
         />
       </div>
       {filteredCourses?.map((course) => (
-        <React.Fragment key={course._doc.slug}>
-          {course._doc.show2 && (
+        <React.Fragment key={course?.slug}>
+          {course?.show2 && (
             <div className="col-xl-4 col-lg-4 col-md-6 col-sm-12 mb-4 course-card">
               <CourseCard x={course} />
             </div>
@@ -62,29 +61,10 @@ const CourseList = ({ list, searchQuery }) => {
 
 const Programs = ({ initialCourses }) => {
   const [searchQuery, setSearchQuery] = useState("");
-  const observer = useRef(null);
 
-
-  const filteredCourses = useMemo(() => initialCourses?.filter((course) => course._doc.title.toLowerCase().includes(searchQuery.toLowerCase())), [searchQuery, initialCourses]);
-
-  const handleSearchChange = (event) => setSearchQuery(event.target.value);
-
-  useEffect(() => {
-    observer.current = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("load");
-        }
-      });
-    });
-
-    const elements = document.querySelectorAll(".course-card");
-    elements.forEach((el) => observer.current.observe(el));
-
-    return () => {
-      observer.current.disconnect();
-    };
-  }, [filteredCourses]);
+  const handleSearchChange = (event) => {
+    setSearchQuery(event.target.value);
+  };
 
 
 
@@ -153,7 +133,7 @@ const Programs = ({ initialCourses }) => {
 
       {/* course list */}
 
-      <CourseList list={filteredCourses} searchQuery={searchQuery} />
+      <CourseList list={initialCourses} searchQuery={searchQuery} />
 
 
       <Footer />
@@ -162,7 +142,7 @@ const Programs = ({ initialCourses }) => {
 };
 
 export async function getServerSideProps() {
-  const { data } = await axios.get(`${API}/courses`);
+  const { data } = await axios.get(`${API}/courses2`);
 
   return {
     props: {
