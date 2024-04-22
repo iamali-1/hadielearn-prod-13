@@ -110,20 +110,31 @@ const Descriptions = ({
           </Card>
         </Col>
 
-        {notice && (
-          <Col xs={24} sm={24} md={16} lg={16}>
-            <Card bordered={false}>
-              <div className={`alert alert-${notice?.variant}`} role="alert">
-                <h4 className="alert-heading">{notice.heading}</h4>
-                <p>{notice.text}</p>
-                <hr />
-                <p className="mb-0">{moment(notice.createdAt).fromNow()}</p>
-              </div>
 
+
+        {notice ?
+          (
+            <Col xs={24} sm={24} md={16} lg={16}>
+              <Card bordered={false}>
+                <div className={`alert alert-${notice?.variant}`} role="alert">
+                  <h4 className="alert-heading">{notice.heading}</h4>
+                  <p>{notice.text}</p>
+                  <hr />
+                  <p className="mb-0">{moment(notice.createdAt).fromNow()}</p>
+                </div>
+
+                {from === "instructor" && <Btn onClick={() => setOpen(true)}> Update </Btn>}
+
+              </Card>
+            </Col>
+          ) :
+          <Col>
+            <Card bordered={false}>
               {from === "instructor" && <Btn onClick={() => setOpen(true)}> Update </Btn>}
             </Card>
           </Col>
-        )}
+        }
+
       </Row>
 
       {from === "instructor" && (

@@ -83,8 +83,8 @@ const BatchComments = ({ from = "student" }) => {
                   key="list-vertical-message"
                 />,
                 <>
-                  {(auth?.user?._id === item.commentBy._id || from === "instructor") && (
-                    <BiTrash key={"delete-comment"} role="button" onClick={() => deleteComment(id, item._id)} />
+                  {(auth?.user?._id === item?.commentBy?._id || from === "instructor") && (
+                    <BiTrash key={"delete-comment"} role="button" onClick={() => deleteComment(id, item?._id)} />
                   )}
                 </>,
               ]}
@@ -92,20 +92,20 @@ const BatchComments = ({ from = "student" }) => {
               <List.Item.Meta
                 avatar={
                   <>
-                    {item.commentBy?.image?.url?.includes("profileImage") ? (
-                      <Avatar src={toImageUrl(item.commentBy?.image?.url)}></Avatar>
+                    {item?.commentBy?.image?.url?.includes("profileImage") ? (
+                      <Avatar src={toImageUrl(item?.commentBy?.image?.url)}></Avatar>
                     ) : (
-                      <Avatar src={item.commentBy?.image?.url}></Avatar>
+                      <Avatar src={item?.commentBy?.image?.url}></Avatar>
                     )}
                   </>
                 }
                 // avatar={<Avatar src={item.commentBy?.image?.url} />}
                 title={
                   <>
-                    <strong>{item.commentBy?.name}</strong> -<small style={{ fontWeight: "normal" }}>{moment(item.createdAt).fromNow()}</small>
+                    <strong>{item?.commentBy?.name}</strong> -<small style={{ fontWeight: "normal" }}>{moment(item?.createdAt).fromNow()}</small>
                   </>
                 }
-                description={<span className="text-dark">{item.text}</span>}
+                description={<span className="text-dark">{item?.text}</span>}
               />
             </List.Item>
           )}

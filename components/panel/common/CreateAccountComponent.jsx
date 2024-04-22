@@ -24,7 +24,7 @@ const CreateAccountComponent = () => {
                 Email<span className="text-danger">*</span>
               </label>
               <input
-                type="text"
+                type="email"
                 className="form-control"
                 id="exampleFormControlInput1"
                 placeholder="example@hadielearning.com "

@@ -27,7 +27,7 @@ const BatchHeader = ({ setShowCenteral, showCenteral }) => {
         {!breakpoints.md && <MenuOutlined style={{ color: styles.primaryColor }} onClick={() => setDrawerVisibility(true)} />}
         <span style={{ color: styles.primaryColor, fontWeight: "600" }}>Welcome {auth?.user?.name}</span>
         <div className="d-flex flex-row justify-content-center align-items-center gap-2" style={{ color: styles.primaryColor, fontWeight: "600" }}>
-          <span className="d-flex flex-row justify-content-center align-items-center gap-1 border-end px-1">
+          {/* <span className="d-flex flex-row justify-content-center align-items-center gap-1 border-end px-1">
             {role === "student" ? (
               <>
                 <FiExternalLink /> Join Live
@@ -39,7 +39,7 @@ const BatchHeader = ({ setShowCenteral, showCenteral }) => {
                 </>
               )
             )}
-          </span>
+          </span> */}
           {!points.md && (
             <span className="d-flex flex-row justify-content-center align-items-center " onClick={() => setDrawerVisibility2(true)}>
               <MdWebAsset />

@@ -53,17 +53,18 @@ const BatchRightCol = () => {
           </div>
         </div>
         {lessonsLoading && <p className="text-center">....</p>}
+
         {batchLessons.length === 0 ? (
           <p className="text-center">No Data</p>
         ) : (
           <div className="customScrollbar">
-            {[1, 2, 3, 4, 5, 2, 2, 3, 4, 5, 6].map((x, index) => (
+            {batchLessons?.map((x, index) => (
               <div key={index} className="d-flex flex-column justify-content-start align-items-start mb-3 px-1" style={{ color: styles.primaryColor }}>
                 <div className="d-flex justify-content-center align-items-center gap-2">
-                  <b>{x.title}</b>
+                  <b>{x?.title}</b>
                   {x.completed && <CheckCircleFilled />}
                 </div>
-                <p>{x.description}</p>
+                <p>{x?.description}</p>
               </div>
             ))}
           </div>

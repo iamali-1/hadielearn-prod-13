@@ -1,18 +1,21 @@
 import Logo from "@/components/ui/common/Logo";
 import { active, navsStyle } from "@/components/ui/common/active";
+import { useAuth } from "@/context/authContext";
 import { AppstoreOutlined, BackwardOutlined, CommentOutlined, FolderOutlined } from "@ant-design/icons";
 import { Menu } from "antd";
 import Link from "next/link";
-import { useRouter } from "next/router";
 import React from "react";
 
 const LeftColMenus = ({ setShowCenteral, showCenteral }) => {
-  const router = useRouter();
+  const [auth] = useAuth()
+
+
   return (
     <>
       <div className={"text-start px-3 py-1"}>
         <Logo />
       </div>
+
       <div className="px-3 py-1">
         <Menu>
           <Menu.Item key="1" className="mt-3" onClick={() => setShowCenteral("desc")} style={showCenteral === "desc" ? navsStyle : {}} icon={<AppstoreOutlined />}>
@@ -25,7 +28,7 @@ const LeftColMenus = ({ setShowCenteral, showCenteral }) => {
             Comments
           </Menu.Item>
           <Menu.Item key="4" className="mt-4" icon={<BackwardOutlined />}>
-            <Link href={"/student/learning"}> Back</Link>
+            <Link href={auth?.user?.role ? 'instructor' : "/student/learning"}> Back</Link>
           </Menu.Item>
         </Menu>
       </div>
