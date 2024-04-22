@@ -99,35 +99,52 @@ export default function TopHeader() {
         open={open}
       >
         <div className="d-flex flex-column gap-3 px-2 textColorLight" style={{ fontWeight: "550" }}>
-          <span>Home</span>
-          <span>About</span>
-          <span>Programs</span>
-          <span>Workshops</span>
-          <span>How it works?</span>
-          <span>Blogs</span>
-          {/* 
-          {!auth?.token && <Btn className="myBtn" icon={<CiLogin size={20} className="textColor" />}>
-            <Link href={'/enroll/program'}>Enroll Now</Link>
-          </Btn>}
+          <div className="d-flex flex-column gap-3 px-2 textColorLight" style={{ fontWeight: "500" }}>
+            <span style={useActive("/")} >
+              <Link href={"/"}> Home </Link>
+            </span>
+            <span style={useActive("about-us")} >
+              <Link href={"/about-us"}> About </Link>
+            </span>
+            <span style={useActive("programs")} >
+              <Link href={"/programs"}> Programs </Link>
+            </span>
+            <span style={useActive("workshops")} >
+              <Link href={"/workshops"}> Workshops </Link>
+            </span>
+            <span style={useActive("how-it-works")} >
+              <Link href={"/how-it-works"}> How it works?</Link>
+            </span>
+            <span style={useActive("blogs")} >
+              <Link href={"/blogs"}> Blogs </Link>
+            </span>
+          </div>
 
 
-          {
-            auth?.token && auth?.user?.role === "admin" && <Btn className="myBtn" >
-              <Link href={'/admin'}>Dashboard</Link>
-            </Btn>
-          }
+          <div style={{ borderLeft: "1px solid lightgrey" }} className="header-main-button px-2">
+            {!auth?.token && <Btn className="myBtn" icon={<CiLogin size={20} className="textColor" />}>
+              <Link href={'/enroll/program'}>Enroll Now</Link>
+            </Btn>}
 
-          {
-            auth?.token && auth?.user?.role === "student" && <Btn className="myBtn" >
-              <Link href={'/student/learning'}>Learning</Link>
-            </Btn>
-          }
 
-          {
-            auth?.token && auth?.user?.role === "instructor" && <Btn className="myBtn" >
-              <Link href={'/instructor'}>Teach</Link>
-            </Btn>
-          } */}
+            {
+              auth?.token && auth?.user?.role === "admin" && <Btn className="myBtn" >
+                <Link href={'/admin'}>Dashboard</Link>
+              </Btn>
+            }
+
+            {
+              auth?.token && auth?.user?.role === "student" && <Btn className="myBtn" >
+                <Link href={'/student/learning'}>Learning</Link>
+              </Btn>
+            }
+
+            {
+              auth?.token && auth?.user?.role === "instructor" && <Btn className="myBtn" >
+                <Link href={'/instructor'}>Teach</Link>
+              </Btn>
+            }
+          </div>
         </div>
 
       </Drawer>
