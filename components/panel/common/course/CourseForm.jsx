@@ -99,7 +99,7 @@ const CourseForm = ({
           {_values.preImage?.url.includes("courseImages") ? (
             _values.preImage?.url && <img width="auto" height={300} src={toImageUrl(_values.preImage?.url)} onClick={() => _setValues((prev) => ({ ...prev, preImage: "" }))} />
           ) : (
-            <img width="auto" height={300} src={preImage?.url} onClick={() => _setValues((prev) => ({ ...prev, preImage: "" }))} />
+            <img width="auto" height={300} src={_values.preImage?.url} onClick={() => _setValues((prev) => ({ ...prev, preImage: "" }))} />
           )}
 
           <br />

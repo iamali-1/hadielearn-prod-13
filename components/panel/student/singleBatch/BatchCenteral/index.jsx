@@ -47,7 +47,7 @@ const BatchCenteral = ({ batchId, showCenteral, from = "student" }) => {
     <>
       {(infoLoading || instLoading) && <p>loading...</p>}
       <div className="my-4">
-        <PanelHeading title={from === "student" ? batch?.title : instBatch?.title} />
+        <PanelHeading title={from === "student" ? batch?.title : instBatch?.title} batch={batch} />
       </div>
       {showCenteral === "desc" && (
         <>

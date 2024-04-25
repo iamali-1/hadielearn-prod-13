@@ -21,7 +21,7 @@ const SingleBatch = () => {
         <LeftColMenus setShowCenteral={setShowCenteral} showCenteral={showCenteral} />
       </Col>
       <Col md={16} xs={24} className="centerColumn ">
-        <BatchHeader setShowCenteral={setShowCenteral} showCenteral={showCenteral} />
+        <BatchHeader batchId={id} setShowCenteral={setShowCenteral} showCenteral={showCenteral} />
         {loading && "loading..."}
         <BatchCenteral batchId={id} showCenteral={showCenteral} />
       </Col>

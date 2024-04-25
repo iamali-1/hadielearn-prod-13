@@ -131,7 +131,6 @@ export const _useBatchInfoInst = () => {
           Authorization: `Bearer ${auth?.token}`,
         },
       });
-      console.log(data, "inst from");
       setBatch(data.batch);
       setAssets(data.assets);
       setFolders(data.folders);

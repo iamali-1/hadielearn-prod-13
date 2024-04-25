@@ -43,7 +43,7 @@ const ProgramDetail = ({ course }) => {
                     <img src={course?.image?.url} alt="" style={{ borderRadius: "20px" }} />
                   )}
 
-                  {/* <img src={course?.image?.url} alt="" style={{ borderRadius: "20px" }} /> */}
+                 
                 </div>
                 <div className="blog__text mb-40">
                   <h1>{course?.title}</h1>

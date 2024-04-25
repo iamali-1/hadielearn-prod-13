@@ -158,3 +158,48 @@ export const _useSingleBatchId = ({ id }) => {
 
   return { batch, loading };
 };
+
+export const _useUpdateClassLink = () => {
+  const [loading, setLoading] = useState(false);
+  const [auth] = useAuth();
+  const [classLink, setClassLink] = useState("");
+
+  const fetchClassLink = async (x) => {
+    try {
+      setLoading(true);
+      const { data } = await axios.get(`${API}/lms/class-link/${x}`);
+      console.log(data, "here isthe class link");
+      setClassLink(data.classLink);
+    } catch (error) {
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const updateClassId = async (x, classLink) => {
+    try {
+      setLoading(true);
+      const { data } = await axios.patch(
+        `${API}/lms/add-class-link/${x}`,
+        { classLink },
+        {
+          headers: {
+            Authorization: `Bearer ${auth?.token}`,
+          },
+        }
+      );
+
+      if (data.error) {
+        toast.error(data.error);
+      } else {
+        toast.success("Class Link Updated");
+      }
+    } catch (err) {
+      console.log(err);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  return { updateClassId, loading, fetchClassLink, classLink, setClassLink };
+};

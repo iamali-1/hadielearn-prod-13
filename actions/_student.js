@@ -49,7 +49,7 @@ export const _useBatchInfo = () => {
     setInfoLoading(true);
     try {
       const { data } = await axios.get(`${API}/${_api}`);
-      console.log(data, "here is ");
+
       setAssets(data.assets);
       setFolders(data.folders);
       setLessons(data.lessons);
@@ -289,7 +289,4 @@ export const _useBatchAssetLessons = () => {
   };
 };
 
-
-export const _useFolders = () => {
-  
-}
+export const _useFolders = () => {};

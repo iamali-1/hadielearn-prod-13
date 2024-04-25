@@ -15,7 +15,7 @@ const SingleBatchInstructor = () => {
         <LeftColMenus setShowCenteral={setShowCenteral} showCenteral={showCenteral} />
       </Col>
       <Col md={16} xs={24} className="centerColumn ">
-        <BatchHeader setShowCenteral={setShowCenteral} showCenteral={showCenteral} />
+        <BatchHeader batchId={id} setShowCenteral={setShowCenteral} showCenteral={showCenteral} />
         <BatchCenteral batchId={id} showCenteral={showCenteral} from={"instructor"} />
       </Col>
       <Col md={4} xs={0} className=" border-start fixedColumn rightColumn">
