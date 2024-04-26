@@ -93,10 +93,10 @@ const WorkshopDetails = ({ workshop }) => {
                 />
               </div>
               <div className="services__img mb-45 w-img">
-                {selected.image.url.includes("uploads") ? (
-                  <img src={toImageUrl(selected.image?.url)} alt="workshop_image" />
+                {selected?.image?.url.includes("uploads") ? (
+                  <img src={toImageUrl(selected?.image?.url)} alt="workshop_image" />
                 ) : (
-                  <img src={selected.image?.url} alt="workshop_image" />
+                  <img src={selected?.image?.url} alt="workshop_image" />
                 )}
               </div>
 
