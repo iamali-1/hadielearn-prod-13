@@ -91,7 +91,7 @@ export const _useEnrollmentForm = ({ which }) => {
     try {
       setLoading(true);
       const payload = !finded
-        ? { ...dataPayload, testLink: testOFCourse?.test }
+        ? { ...dataPayload, testLink: testOFCourse?.test, enrollTo: which?.split("_")[0] }
         : {
             ...userByEmail,
             testLink: testOFCourse?.test,
@@ -99,9 +99,8 @@ export const _useEnrollmentForm = ({ which }) => {
             course: _values?.course,
             policyAccepted: _values?.policyAccepted,
             whatsAppphoneNumber: _values?.whatsAppphoneNumber,
+            enrollTo: which?.split("_")[0],
           };
-      // console.log(payload);
-      // return;
 
       const { data } = await axios.post(`${API}/enroll-stu`, payload);
 
