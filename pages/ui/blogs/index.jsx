@@ -74,7 +74,7 @@ const Blogs = ({ initialBlogs, recentBlogs, categories, mostView }) => {
       <PageHeading
         title={"Explore Hadi E-learning Blogs"}
         para={
-          "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available"
+          "Explore the future of IT education with Hadi eLearning, your gateway to mastering marketing, graphics, data analysis, and web development. Join a community of learners, where expertise meets innovation, shaping tomorrows digital landscape."
         }
       />
       {!loading && (
