@@ -34,6 +34,7 @@ export const _useEnrollmentForm = ({ which }) => {
   const [enrollInto, setEnrollInto] = useState([]);
   const [userByEmail, setUserByEmail] = useState(null);
   const [userLoading, setUserLoading] = useState(false);
+  const [selectedWorkshop, setSelectedWorkshop] = useState({});
   const [loading, setLoading] = useState(false);
   const [_values, _setValues] = useState(formInitValues);
   const [finded, setFinded] = useState(false);
@@ -70,6 +71,10 @@ export const _useEnrollmentForm = ({ which }) => {
     }
   }, [which]);
 
+  useEffect(() => {
+    setSelectedWorkshop(enrollInto?.find((x) => x.slug === _values?.workshop));
+  }, [_values?.workshop]);
+
   const gettingUserData = async (email) => {
     try {
       setUserLoading(true);
@@ -91,7 +96,18 @@ export const _useEnrollmentForm = ({ which }) => {
     try {
       setLoading(true);
       const payload = !finded
-        ? { ...dataPayload, testLink: testOFCourse?.test, enrollTo: which?.split("_")[0] }
+        ? {
+            ...dataPayload,
+            testLink: testOFCourse?.test,
+            enrollTo: which?.split("_")[0],
+
+            meetingId: selectedWorkshop && selectedWorkshop.meetingId,
+            passcodeId: selectedWorkshop && selectedWorkshop.pascodeId,
+            link: selectedWorkshop && selectedWorkshop.zoomLink,
+            authorName: selectedWorkshop && selectedWorkshop?.instructor?.name,
+            heading: selectedWorkshop && selectedWorkshop.title,
+            meetingTiming: selectedWorkshop && selectedWorkshop.meetingTiming,
+          }
         : {
             ...userByEmail,
             testLink: testOFCourse?.test,
@@ -100,7 +116,17 @@ export const _useEnrollmentForm = ({ which }) => {
             policyAccepted: _values?.policyAccepted,
             whatsAppphoneNumber: _values?.whatsAppphoneNumber,
             enrollTo: which?.split("_")[0],
+
+            meetingId: selectedWorkshop && selectedWorkshop.meetingId,
+            passcodeId: selectedWorkshop && selectedWorkshop.pascodeId,
+            link: selectedWorkshop && selectedWorkshop.zoomLink,
+            authorName: selectedWorkshop && selectedWorkshop?.instructor?.name,
+            heading: selectedWorkshop && selectedWorkshop.title,
+            meetingTiming: selectedWorkshop && selectedWorkshop.meetingTiming,
           };
+
+      // console.log(payload, selectedWorkshop, "here is the payload");
+      // return;
 
       const { data } = await axios.post(`${API}/enroll-stu`, payload);
 
