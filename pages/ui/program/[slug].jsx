@@ -2,9 +2,10 @@ import Footer from "@/components/ui/common/Footer";
 import PageHeading from "@/components/ui/common/PageHeading";
 import TopHeader from "@/components/ui/common/TopHeader";
 import Tops from "@/components/ui/common/Tops";
-import CourseSideBar from "@/components/ui/courses/CourseSideBar";
+import CourseSideBar, { CourseInfo } from "@/components/ui/courses/CourseSideBar";
 import FaqsCourseDetail from "@/components/ui/courses/FaqsCourseDetail";
 import { API, toImageUrl } from "@/config/APIs";
+import { Grid } from "antd";
 import axios from "axios";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -13,6 +14,7 @@ import { useState } from "react";
 const ProgramDetail = ({ course }) => {
   const router = useRouter();
   const { slug } = router.query;
+  const points = Grid.useBreakpoint()
 
   // tabs
   const [activeTabs, setactiveTabs] = useState("first");
@@ -42,9 +44,14 @@ const ProgramDetail = ({ course }) => {
                   ) : (
                     <img src={course?.image?.url} alt="" style={{ borderRadius: "20px" }} />
                   )}
-
-                 
                 </div>
+
+                {
+                  !points.md && <div className="pb-100">
+                    <CourseInfo slug={slug} course={course} />
+                  </div>
+                }
+
                 <div className="blog__text mb-40">
                   <h1>{course?.title}</h1>
                   {/* {course?.overview} */}

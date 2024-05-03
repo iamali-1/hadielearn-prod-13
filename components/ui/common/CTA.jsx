@@ -4,7 +4,7 @@ import React from "react";
 const CTA = () => {
   return (
     <>
-      <section className="cta__area pt-80 pb-10">
+      <section className="cta__area pt-80 pb-140">
         <div className="container p-relative">
           <div className="row">
             <div className="col-xl-10 offset-xl-1">

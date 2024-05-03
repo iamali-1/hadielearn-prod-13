@@ -37,7 +37,7 @@ const FaqsCourseDetail = ({ details, page }) => {
 
                 {page === "outline" && (
                   <>
-                    <Collapse items={items} defaultActiveKey={['1']} />
+                    <Collapse items={items}  />
                   </>
                 )}
 

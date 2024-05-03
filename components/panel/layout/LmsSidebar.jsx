@@ -32,7 +32,7 @@ const LmsSidebar = ({ from = "without-sidebar" }) => {
       <Menu.Item className="mt-3" onClick={() => router.push("/")} icon={<HomeOutlined />} style={{}}>
         Home
       </Menu.Item>
-      <Menu.Item className="mt-1" icon={<MdOutlineDashboardCustomize />}>
+      <Menu.Item onClick={() => router.push("/lms")} className="mt-1" style={active("/lms", router) ? navsStyle : {}} icon={<MdOutlineDashboardCustomize />}>
         Dashboard
       </Menu.Item>
       <Menu.Item

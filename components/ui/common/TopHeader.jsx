@@ -80,6 +80,12 @@ export default function TopHeader() {
                   <Link href={'/instructor'}>Teach</Link>
                 </Btn>
               }
+
+              {
+                auth?.token && auth?.user?.role === "cord" && <Btn className="myBtn" >
+                  <Link href={'/instructor'}>LMS</Link>
+                </Btn>
+              }
             </div>
 
 

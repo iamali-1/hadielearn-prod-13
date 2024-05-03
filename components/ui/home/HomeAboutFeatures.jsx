@@ -37,13 +37,13 @@ const HomeTwoSingleFeature = ({ icon, title }) => {
 const HomeAboutFeatures = () => {
   return (
     <>
-      <section className="features__area pt-115 pb-120">
+      <section className="features__area pt-115 pb-140 ">
         <div className="container">
           <div className="row">
             <div className="col-xl-5 col-lg-6">
               <div className="features__content-left">
                 <div className="section__title section__title-h2 mb-25">
-                  <span>About Hadi E-learning.</span>
+                  {/* <span>About Hadi E-learning.</span> */}
                   <div className="section__title section__title-3 mb-25">
                     <h2>
                       Get to <br />
@@ -52,11 +52,16 @@ const HomeAboutFeatures = () => {
                   </div>
                 </div>
                 <p>
-                  In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on
-                  meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.
+                  Meet our mascot, Hadi. Hadi is your digital leader and will lead you through specially structured computer short courses that will not only enhance your IT skills but will also help you navigate efficiency through your career path.
+                  <br />
+                  Hadi mission is to empower the countrys youth with the strength of modern skills so they can have equal opportunities to excel in their careers as anyone else in the world.
+                  <br />
+                  So join hands with Hadi today, and unlock the door to many shiny prospects in this modern digital world.
+
                 </p>
+
                 <Link href="/about-us" className="z-btn">
-                  What we do
+                  Get to know Hadi better
                   <i>
                     <CgArrowLongRight />
                   </i>
@@ -68,12 +73,12 @@ const HomeAboutFeatures = () => {
                 <div className="row">
                   <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6">
                     <HomeTwoSingleFeature icon={<FaLightbulb />} title="Mission & Vission" />
-                    <HomeTwoSingleFeature icon={<IoDocumentTextOutline />} title="Platform" />
+                    <HomeTwoSingleFeature icon={<IoDocumentTextOutline />} title="Mission & Vission" />
                   </div>
 
                   <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6">
-                    <HomeTwoSingleFeature icon={<FaRibbon />} title="Background" />
-                    <HomeTwoSingleFeature icon={<BiLock />} title="Portfolio Expert" />
+                    <HomeTwoSingleFeature icon={<FaRibbon />} title="How Hadi has evolved" />
+                    <HomeTwoSingleFeature icon={<BiLock />} title="Background" />
                   </div>
                 </div>
               </div>

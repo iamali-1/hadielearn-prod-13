@@ -1,4 +1,6 @@
+import { Avatar, Card } from "antd";
 import React from "react";
+import Marquee from "react-fast-marquee";
 import Slider from "react-slick";
 
 const Testimonials = () => {
@@ -56,12 +58,60 @@ const Testimonials = () => {
   return (
     <>
       <section
-        className="testimonial__area"
+        className="testimonial__area pb-140"
         style={{
+          // backgroundColor: " rgba(49, 175, 152, 1)"
           backgroundImage: "linear-gradient(329deg, rgba(49, 175, 152, 1) 0%, rgba(15, 63, 93, 1) 100%)",
         }}
       >
-        <div className="container pt-50 pb-50">
+        <div className="container ">
+
+          {/* <div className="section__title section__title-3 mb-30">
+            <span className="">Testimonials</span>
+            <h2 className="">What students are saying</h2>
+          </div> */}
+
+          {/* <div className="mb-15">
+            <Marquee gradient={false} speed={60} pauseOnHover={true} pauseOnClick={true} delay={0} play={true} direction="right">
+              {
+                testimonialData?.map(x =>
+                  <Card hoverable className="mx-4 my-2 " key={x.id} style={{ width: "350px", }}>
+
+                    <div className="d-flex flex-column align-items-start gap-3 ">
+                      <span>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying</span>
+                      <div className="d-flex  align-items-center gap-2">
+                        <Avatar src="https://api.dicebear.com/7.x/miniavs/svg?seed=1" size={'large'} />
+                        <b>{x.name}</b>
+                      </div>
+                    </div>
+
+                  </Card>
+                )
+              }
+            </Marquee >
+
+          </div>
+
+          <Marquee gradient={false} speed={40} pauseOnHover={true} pauseOnClick={true} delay={0} play={true} direction="left">
+            {
+              testimonialData?.map(x =>
+                <Card hoverable className="mx-4 my-2 " key={x.id} style={{ width: "350px", }}>
+
+                  <div className="d-flex flex-column align-items-start gap-3 ">
+                    <span>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying</span>
+                    <div className="d-flex  align-items-center gap-2">
+                      <Avatar src="https://api.dicebear.com/7.x/miniavs/svg?seed=3" size={'large'} />
+                      <b>{x.name}</b>
+                    </div>
+                  </div>
+
+                </Card>
+              )
+            }
+          </Marquee > */}
+
+
+
           <div className="section__title section__title-3 mb-30">
             <span className="white-color">Testimonials</span>
             <h2 className="white-color">What students are saying</h2>
