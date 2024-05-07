@@ -200,6 +200,11 @@ const Footer = () => {
           </div>
         </div>
       </div>
+
+      <div className="d-flex justify-content-center align-items-center text-white py-2" style={{ backgroundColor: "#0f3f5d" }}>
+
+        A project by &quot;Ideas9&quot;
+      </div>
     </footer>
   );
 };

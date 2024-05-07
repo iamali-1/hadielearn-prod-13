@@ -13,11 +13,14 @@ const Brands = () => {
             </div>
           </div>
           <div className="row justify-content-center">
-            <div className="col-xl-4 col-lg-4 col-md-6 text-center mt-40">
+            <div className="col-xl-4 col-lg-4 col-md-4 text-center mt-40">
               <img src="/images/brands/PIT.png" style={{ height: "50px" }} />
             </div>
-            <div className="col-xl-4 col-lg-4 col-md-6 text-center mt-40">
+            <div className="col-xl-4 col-lg-4 col-md-4 text-center mt-40">
               <img src="/images/brands/cycarts_logo.png" style={{ height: "50px" }} />
+            </div>
+            <div className="col-xl-4 col-lg-4 col-md-4 text-center mt-40">
+              <img src="/images/brands/ideas-9-logo-png.png" style={{ height: "50px" }} />
             </div>
           </div>
         </div>
