@@ -77,7 +77,7 @@ const Stats2 = () => {
             <SingleCount counter={50000} title="Queries answered" /> */}
 
           <CounterBox counter={1500} title="Live classes" image={'live_classes'} />
-          <CounterBox counter={30000} title="Enrolled Students" image={'enrolled_Students'} />
+          <CounterBox counter={30000} title="Enrolled Students" image={'enrolled_students'} />
           <CounterBox counter={3000} title="Students on waitlist" image={'students_on_waitlist'} />
           <CounterBox counter={50000} title="Queries answered" image={'queries_answered'} />
         </div>
