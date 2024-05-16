@@ -78,9 +78,9 @@ const Testimonials = () => {
                   <Card hoverable className="mx-4 my-2 " key={x.id} style={{ width: "350px", }}>
 
                     <div className="d-flex flex-column align-items-start gap-3 ">
-                      <span>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying</span>
+                      <span>"Hadi E-LEARNING's graphic designing course was comprehensive and well-structured. I gained valuable skills and confidence, thanks to the supportive instructors. Ready to take on real-world projects!"</span>
                       <div className="d-flex  align-items-center gap-2">
-                        <Avatar src="https://api.dicebear.com/7.x/miniavs/svg?seed=1" size={'large'} />
+                        <Avatar src="images/testimonials/user.webp" size={'large'} />
                         <b>{x.name}</b>
                       </div>
                     </div>
