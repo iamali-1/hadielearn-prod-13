@@ -58,4 +58,5 @@ jobs:
           script: |
             cd /home/hadielearning/hadielearn-prod-13
             git pull
+            npm run build
             pm2 reload prod --update-env
