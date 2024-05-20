@@ -123,7 +123,7 @@ export const CourseInfo = ({ course, slug }) => {
           </div>
         </div>
       )}
-      <div className="sidebar__widget mb-30 ">
+      {/* <div className="sidebar__widget mb-30 ">
         <div className="sidebar__widget-title mb-30">
           <h4>Registeration Fee</h4>
         </div>
@@ -134,7 +134,7 @@ export const CourseInfo = ({ course, slug }) => {
             </ul>
           </div>
         </div>
-      </div>
+      </div> */}
 
       <div className="sidebar__widget mb-30 ">
         <div className="sidebar__widget-title mb-30">
