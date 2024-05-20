@@ -76,10 +76,10 @@ const Stats2 = () => {
             <SingleCount counter={3000} title="Students on waitlist" />
             <SingleCount counter={50000} title="Queries answered" /> */}
 
-          <CounterBox counter={1500} title="Live classes" image={'live_classes'} />
-          <CounterBox counter={30000} title="Enrolled Students" image={'enrolled_students'} />
-          <CounterBox counter={3000} title="Students on waitlist" image={'students_on_waitlist'} />
-          <CounterBox counter={50000} title="Queries answered" image={'queries_answered'} />
+          <CounterBox counter={2500} title="Live classes" image={'live_classes'} />
+          <CounterBox counter={35000} title="Enrolled Students" image={'enrolled_students'} />
+          <CounterBox counter={1000} title="Students on waitlist" image={'students_on_waitlist'} />
+          <CounterBox counter={60000} title="Queries answered" image={'queries_answered'} />
         </div>
       </div>
     </section>
