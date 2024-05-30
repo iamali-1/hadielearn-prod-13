@@ -3,6 +3,10 @@ import React, { useState } from "react";
 
 import CountUp from "react-countup";
 import VisibilitySensor from "react-visibility-sensor";
+import { IoIosGitNetwork } from "react-icons/io";
+import { AiOutlineSafetyCertificate } from "react-icons/ai";
+
+
 
 const SingleCount = ({ counter, title, color }) => {
   const [viewCountUp, setViewCountUp] = useState(false);
@@ -31,7 +35,7 @@ const SingleCount = ({ counter, title, color }) => {
 };
 
 
-const CounterBox = ({ counter, title, color, image }) => {
+const CounterBox = ({ counter, title, color, image, Icon }) => {
   const [viewCountUp, setViewCountUp] = useState(false);
 
   const onVisibilityChange = (isVisible) => {
@@ -43,7 +47,8 @@ const CounterBox = ({ counter, title, color, image }) => {
     <div className="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12 mb-1 ">
       <Card hoverable>
         <div className="d-flex align-items-center gap-3" style={{ color: "#135c6c" }}>
-          <img src={`images/hero/${image}.svg`} alt="live class" height={60} />
+          {Icon && Icon}
+          {image && <img src={`images/hero/${image}.svg`} alt="live class" height={60} />}
           <div className="d-flex flex-column ">
             <b style={{ color: "#135c6c", fontSize: "30px" }}>
               <VisibilitySensor onChange={onVisibilityChange} offset={{ top: 10 }} delayedCall>
@@ -76,10 +81,13 @@ const Stats2 = () => {
             <SingleCount counter={3000} title="Students on waitlist" />
             <SingleCount counter={50000} title="Queries answered" /> */}
 
-          <CounterBox counter={2500} title="Live classes" image={'live_classes'} />
-          <CounterBox counter={35000} title="Enrolled Students" image={'enrolled_students'} />
-          <CounterBox counter={1000} title="Students on waitlist" image={'students_on_waitlist'} />
-          <CounterBox counter={60000} title="Queries answered" image={'queries_answered'} />
+          <CounterBox counter={3000} title="Live classes" image={'live_classes'} />
+          <CounterBox counter={3000} title="Certified students" Icon={<AiOutlineSafetyCertificate size={50} />} />
+          <CounterBox counter={10000} title="Students Accommodated in Classes" image={'queries_answered'} />
+          <CounterBox counter={40000} title="Enrolled students" image={'enrolled_students'} />
+          <CounterBox counter={600} title="Internships Provided" Icon={<IoIosGitNetwork size={50} />} />
+
+
         </div>
       </div>
     </section>
