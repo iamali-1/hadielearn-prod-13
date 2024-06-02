@@ -19,19 +19,15 @@ const HowItWorks = () => {
       <Tops
         header
         grid
-        title={
-          "How our best online learning platform, Hadi e-learning works"
-        }
-        desc={
-          "Go through these simple steps and enroll now in the most suitable course to make your mark in this digital world with the best online learning platform, hadi e-learning."
-        }
+        title={"How our best online learning platform, Hadi e-learning works"}
+        desc={"Go through these simple steps and enroll now in the most suitable course to make your mark in this digital world with the best online learning platform, hadi e-learning."}
         conLink={"https://hadielearning.com/how-it-works"}
       />
 
       <PageHeading
         title={"How it works?"}
         para={
-          "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available."
+          "Go through these simple steps and enroll now in the most suitable course to make your mark in this digital world with the best online learning platform, hadi e-learning."
         }
       />
       <div className="container pt-90">
