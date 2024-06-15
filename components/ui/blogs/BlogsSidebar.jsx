@@ -52,7 +52,7 @@ const BlogSidebar = ({ RecentBlogs, Categories, handleSearch, searchQuery, setSe
 
         <div className="sidebar__widget mb-75 ">
           <div className="sidebar__widget-title mb-50">
-            <h4>Most View Blogs</h4>
+            <h4>Most Viewed Blogs</h4>
           </div>
           <div className="sidebar__widget-content">
             <div className="rc-post">

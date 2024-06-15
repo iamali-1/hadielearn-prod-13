@@ -1,6 +1,5 @@
 import Footer from "@/components/ui/common/Footer";
 import PageHeading from "@/components/ui/common/PageHeading";
-import TopHeader from "@/components/ui/common/TopHeader";
 import Tops from "@/components/ui/common/Tops";
 import { API, toImageUrl } from "@/config/APIs";
 import axios from "axios";

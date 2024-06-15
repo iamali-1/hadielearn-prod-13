@@ -31,7 +31,7 @@ export const faqs_data = [
     label: "How does Hadi E-Learning create opportunities for talented youth?",
     key: 5,
     children:
-      "Hadi E-learning is a welfare initiative providing quality IT training at a subsidized cost. This platform provides learning opportunities to all students. Previously these opportunities were only available for a certain percentage of students due to affordability. With Hadi E-learning this bridge has been gapped as all our programs are accessible to students at a very minimal cost in comparison with the others in the market.",
+      "Hadi E-learning is a welfare initiative providing quality IT training at a Free Quality IT training. This platform provides learning opportunities to all students. Previously these opportunities were only available for a certain percentage of students due to affordability. With Hadi E-learning this bridge has been gapped as all our programs are accessible to students at no cost in comparison with the others in the market.",
   },
 
   {

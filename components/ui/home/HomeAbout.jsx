@@ -1,6 +1,7 @@
 import React from "react";
 import { CgArrowLongRight } from "react-icons/cg";
 import Link from "next/link";
+import Image from "next/image";
 
 const HomeAbout = () => {
   return (
@@ -16,7 +17,7 @@ const HomeAbout = () => {
           <div className="row">
             <div className="col-xl-7 col-lg-6">
               <div className="about__thumb-2 p-relative m-img text-center">
-                <img src="/images/about/about.png" alt="" id="about_mascot" />
+                <Image width={600} height={500} src="/images/about/about.png" alt="" id="about_mascot" />
               </div>
             </div>
             <div className="col-xl-5 col-lg-6">

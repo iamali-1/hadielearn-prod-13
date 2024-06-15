@@ -8,10 +8,10 @@ import React from "react";
 import ResponsiveHero from "@/components/ui/home/ResponsiveHero";
 import HomeAbout from "@/components/ui/home/HomeAbout";
 import CTA from "@/components/ui/common/CTA";
-import HomeAboutFeatures from "@/components/ui/home/HomeAboutFeatures";
+// import HomeAboutFeatures from "@/components/ui/home/HomeAboutFeatures";
 import Brands from "@/components/ui/common/Brands";
 import Testimonials from "@/components/ui/common/Testimoniols";
-import CourseCats from "@/components/ui/home/CourseCats";
+// import CourseCats from "@/components/ui/home/CourseCats";
 import Stats2 from "@/components/ui/common/Stats2";
 import Tops from "@/components/ui/common/Tops";
 

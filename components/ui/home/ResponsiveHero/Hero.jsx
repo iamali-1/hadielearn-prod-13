@@ -1,8 +1,9 @@
-import React from "react";
 import { CgArrowLongRight } from "react-icons/cg";
 import Link from "next/link";
 import Slider from "react-slick";
 import Typewriter from "typewriter-effect";
+import Image from "next/image";
+
 
 const Hero = () => {
   const settings = {
@@ -26,7 +27,7 @@ const Hero = () => {
               <div className="row">
                 <div className="col-xl-6 col-lg-5 col-0 order-last" id="imagesBox">
                   <div className="hero__thumb-wrapper ml-70 scene p-relative w ">
-                    <img id="mascot" className="layer" data-depth="0.2" src="/images/hero/finance.png" alt="" />
+                    <Image width={500} height={500} id="mascot" className="layer" data-depth="0.2" src="/images/hero/finance.png" alt="" />
                   </div>
                 </div>
 
@@ -70,7 +71,7 @@ const Hero = () => {
               <div className="row">
                 <div className="col-xl-6 col-lg-5 col-0 order-last" id="imagesBox">
                   <div className="hero__thumb-wrapper ml-70 scene p-relative w ">
-                    <img id="mascot" className="layer" data-depth="0.2" src="/images/hero/checks.svg" alt="" />
+                    <Image width={500} height={500} id="mascot" className="layer" data-depth="0.2" src="/images/hero/checks.svg" alt="" />
                   </div>
                 </div>
 
@@ -114,7 +115,7 @@ const Hero = () => {
               <div className="row">
                 <div className="col-xl-6 col-lg-5 col-0 order-last" id="imagesBox">
                   <div className="hero__thumb-wrapper ml-70 scene p-relative w ">
-                    <img id="mascot" className="layer" data-depth="0.2" src="/images/hero/finance.png" alt="" />
+                    <Image width={500} height={500} id="mascot" className="layer" data-depth="0.2" src="/images/hero/finance.png" alt="" />
                   </div>
                 </div>
 
