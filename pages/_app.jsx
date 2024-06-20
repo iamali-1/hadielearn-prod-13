@@ -4,6 +4,7 @@ import NProgress from "nprogress";
 import "nprogress/nprogress.css";
 import Router, { useRouter } from "next/router";
 
+
 import { Toaster } from "react-hot-toast";
 import { useEffect } from "react";
 NProgress.configure({ showSpinner: false });

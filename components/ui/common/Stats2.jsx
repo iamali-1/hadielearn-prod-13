@@ -81,11 +81,12 @@ const Stats2 = () => {
             <SingleCount counter={3000} title="Students on waitlist" />
             <SingleCount counter={50000} title="Queries answered" /> */}
 
-          <CounterBox counter={3000} title="Live classes" image={'live_classes'} />
-          <CounterBox counter={3000} title="Certified students" Icon={<AiOutlineSafetyCertificate size={50} />} />
-          <CounterBox counter={10000} title="Students Accommodated in Classes" image={'queries_answered'} />
           <CounterBox counter={40000} title="Enrolled students" image={'enrolled_students'} />
+          <CounterBox counter={17000} title="Students Accommodated" image={'queries_answered'} />
+          <CounterBox counter={4000} title="Certified students" Icon={<AiOutlineSafetyCertificate size={50} />} />
           <CounterBox counter={600} title="Internships Provided" Icon={<IoIosGitNetwork size={50} />} />
+
+          <CounterBox counter={950} title="Success Stories" image={'live_classes'} />
 
 
         </div>

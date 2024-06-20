@@ -1,23 +1,27 @@
-import React from "react";
+
+import { useState } from "react";
 import Mission from "./Mission";
 import Vission from "./Vission";
 
 const MissionVission = () => {
+
+  const [tabs, setTabs] = useState('mission')
+
   return (
-    <section className="expart__area pt-100 wow fadeInUp" data-wow-delay=".4s">
+    <section className="expart__area pt-200 wow fadeInUp" >
       <div className="container">
         <div className="row">
           <div className="col-xl-12">
             <div className="expart__wrapper">
               <div className="expart__nav">
-                <ul className="nav nav-pills justify-content-end" id="expart-tab" role="tablist">
+                <ul className="nav nav-pills justify-content-end" >
                   <li className="nav-item text-center">
-                    <a className="nav-link active" id="philosophy-tab" data-bs-toggle="pill" href="#philosophy" role="tab" aria-controls="philosophy" aria-selected="true">
+                    <a onClick={() => setTabs('mission')} role="button" className={`nav-link ${tabs === "mission" && 'active'}`} >
                       Mission
                     </a>
                   </li>
                   <li className="nav-item text-center">
-                    <a className="nav-link" id="work-tab" data-bs-toggle="pill" href="#work" role="tab" aria-controls="work" aria-selected="false">
+                    <a onClick={() => setTabs('vision')} role="button" className={`nav-link ${tabs === "vision" && 'active'}`} >
                       Vision
                     </a>
                   </li>
@@ -25,10 +29,10 @@ const MissionVission = () => {
               </div>
               <div className="expart__tab">
                 <div className="tab-content" id="expart-Content">
-                  <div className="tab-pane fade show active" id="philosophy" role="tabpanel" aria-labelledby="philosophy-tab">
+                  <div className={`tab-pane fade ${tabs === 'mission' && "show active"}`} >
                     <Mission image="1" />
                   </div>
-                  <div className="tab-pane fade" id="work" role="tabpanel" aria-labelledby="work-tab">
+                  <div className={`tab-pane fade ${tabs === 'vision' && "show active"}`} >
                     <Vission image="2" />
                   </div>
                 </div>
@@ -38,6 +42,8 @@ const MissionVission = () => {
         </div>
       </div>
     </section>
+
+
   );
 };
 

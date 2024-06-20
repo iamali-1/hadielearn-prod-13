@@ -1,6 +1,5 @@
-import React from "react";
 
-const Mission = ({ image }) => {
+const Mission = () => {
   return (
     <>
       <div className="expart__tab-content white-bg">
