@@ -81,6 +81,7 @@ const CreateAccountComponent = () => {
                 <option value="instructor">Course Instructor</option>
                 <option value="student">student</option>
                 <option value="cord">Student Coordinator</option>
+                <option value="reader">Reader as Admin</option>
               </select>
             </div>
           </div>

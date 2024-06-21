@@ -70,6 +70,13 @@ export default function TopHeader() {
               }
 
               {
+                auth?.token && auth?.user?.role === "reader" && <Btn className="myBtn" >
+                  <Link href={'/admin'}>View Dashboard</Link>
+                </Btn>
+              }
+
+
+              {
                 auth?.token && auth?.user?.role === "student" && <Btn className="myBtn" >
                   <Link href={'/student/learning'}>Learning</Link>
                 </Btn>

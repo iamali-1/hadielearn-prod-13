@@ -19,47 +19,50 @@ const UsersComponent = () => {
       {loading ? (
         <>Loading...</>
       ) : (
-        // <div className="table-responsive">
-        <table class="table table-striped  text-dark" style={{ backgroundColor: "white", borderRadius: "10px" }}>
-          <thead>
-            <tr>
-              <th scope="col">{loading ? "loading..." : "#"}</th>
-              <th scope="col">Name</th>
-              <th scope="col">Role</th>
-              <th scope="col">Email</th>
-            </tr>
-          </thead>
-          <tbody>
-            {list.length === 0 ? (
-              <h5 className="text-dark p-4">No Users</h5>
-            ) : (
-              list &&
-              list?.map((x, index) => (
-                <tr key={index}>
-                  <td className="text-dark" scope="row ">
-                    {++index}
-                  </td>
-                  <td className="text-dark">{x.name}</td>
-                  <td className="text-dark">{x.role}</td>
-                  <td className="text-dark">{x.email}</td>
+        <div className="table-responsive">
+          {auth?.user?.role === 'reader' ? <h4>Sorry, You don not have the right to view the data.</h4> : <table class="table table-striped  text-dark" style={{ backgroundColor: "white", borderRadius: "10px" }}>
+            <thead>
+              <tr>
+                <th scope="col">{loading ? "loading..." : "#"}</th>
+                <th scope="col">Name</th>
+                <th scope="col">Role</th>
+                <th scope="col">Email</th>
+              </tr>
+            </thead>
+            <tbody>
 
-                  {auth?.user?._id !== x._id && (
-                    <td className="text-dark">
-                      <BiEdit style={{ cursor: "pointer" }} onClick={() => router.push(`/cms-test/users/${x._id}`)} />
-                    </td>
-                  )}
 
-                  {auth?.user?._id !== x._id && (
-                    <td className="text-dark">
-                      <BiTrash style={{ cursor: "pointer" }} onClick={() => deleteUser(x._id)} />
+
+              {list.length === 0 ? (
+                <h5 className="text-dark p-4">No Users</h5>
+              ) : (
+                list &&
+                list?.map((x, index) => (
+                  <tr key={index}>
+                    <td className="text-dark" scope="row ">
+                      {++index}
                     </td>
-                  )}
-                </tr>
-              ))
-            )}
-          </tbody>
-        </table>
-        // {/* </div> */}
+                    <td className="text-dark">{x.name}</td>
+                    <td className="text-dark">{x.role}</td>
+                    <td className="text-dark">{x.email}</td>
+
+                    {auth?.user?._id !== x._id && (
+                      <td className="text-dark">
+                        <BiEdit style={{ cursor: "pointer" }} onClick={() => router.push(`/cms-test/users/${x._id}`)} />
+                      </td>
+                    )}
+
+                    {auth?.user?._id !== x._id && (
+                      <td className="text-dark">
+                        <BiTrash style={{ cursor: "pointer" }} onClick={() => deleteUser(x._id)} />
+                      </td>
+                    )}
+                  </tr>
+                ))
+              )}
+            </tbody>
+          </table>}
+        </div>
       )}
     </Card>
   );

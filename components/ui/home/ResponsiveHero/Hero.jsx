@@ -115,7 +115,7 @@ const Hero = () => {
               <div className="row">
                 <div className="col-xl-6 col-lg-5 col-0 order-last" id="imagesBox">
                   <div className="hero__thumb-wrapper ml-70 scene p-relative w ">
-                    <Image width={500} height={500} id="mascot" className="layer" data-depth="0.2" src="/images/hero/finance.png" alt="" />
+                    <Image width={500} height={500} id="mascot" className="layer" data-depth="0.2" src="/images/hero/finance.webp" alt="" />
                   </div>
                 </div>
 

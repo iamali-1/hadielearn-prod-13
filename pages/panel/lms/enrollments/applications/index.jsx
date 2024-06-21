@@ -136,7 +136,7 @@ const EnrollmentsApplications = () => {
       />
 
       <Card className="my-5">
-        <EnrollmentTable
+        {auth?.user?.role === "reader" ? <h5>Sorry, you do not have the right to view the data.</h5> : <EnrollmentTable
           enrollments={enrollments}
           totalDataCount={totalDataCount}
           totalPages={totalPages}
@@ -145,7 +145,7 @@ const EnrollmentsApplications = () => {
           enrollToSelect={enrollToSelect}
           setOpen={setOpen}
           setCurrentObj={setCurrentObj}
-        />
+        />}
       </Card>
 
       <EnrollmentViewModal currentObj={currentObj} open={open} setOpen={setOpen} />

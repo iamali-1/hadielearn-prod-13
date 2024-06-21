@@ -63,7 +63,7 @@ const CmsSidebar = ({ from = "without-sidebar" }) => {
         All Blogs
       </Menu.Item>
 
-      {auth?.user && auth?.user?.role === "admin" && (
+      {auth?.user && (auth?.user?.role === "admin" || auth?.user?.role === "reader") && (
         <Menu.Item onClick={() => router.push("/admin")} className="mt-3" icon={<BackwardFilled />}>
           Back
         </Menu.Item>

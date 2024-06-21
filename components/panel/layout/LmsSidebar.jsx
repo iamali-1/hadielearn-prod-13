@@ -83,7 +83,7 @@ const LmsSidebar = ({ from = "without-sidebar" }) => {
       {/* <Menu.Item style={active("library", router) ? navsStyle : {}} onClick={() => router.push("/cms-test/library")} className="mt-3" icon={<MdImageSearch />}>
         Gallery
       </Menu.Item> */}
-      {auth?.user && auth?.user?.role === "admin" && (
+      {auth?.user && (auth?.user?.role === "admin" || auth?.user?.role === "reader") && (
         <Menu.Item onClick={() => router.push("/admin")} className="mt-3" icon={<BackwardFilled />}>
           Back
         </Menu.Item>

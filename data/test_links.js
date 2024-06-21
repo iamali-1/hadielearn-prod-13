@@ -98,8 +98,6 @@ export const test_links = [
     test: "https://docs.google.com/forms/d/e/1FAIpQLSfpBqOTldYa4dpEUN4GtRf5-Xp7-stEoSw5hRScWiS-VickcQ/viewform?usp=sf_link",
   },
 
-  
-
   // https://docs.google.com/forms/d/e/1FAIpQLSfpBqOTldYa4dpEUN4GtRf5-Xp7-stEoSw5hRScWiS-VickcQ/viewform?usp=sf_link
 
   // {
@@ -115,4 +113,27 @@ export const test_links = [
     slug: "fundamentals-of-data-analysis",
     test: "https://www.proprofs.com/quiz-school/ugc/story.php?title=fundamentals-of-data-analysis-evaluation-quiz",
   },
+
+  {
+    id: "65f3ff2a91ba9bb56e00d605",
+    title: "Data Analysis with Microsoft Power BI",
+    slug: "data-analysis-with-microsoft-power-bi",
+    test: "https://www.proprofs.com/quiz-school/ugc/story.php?title=data-analytics-with-tableau-and-power-bi-quiz",
+  },
+
+  {
+    id: "65f3fbb691ba9bb56e00d596",
+    title: "Data Analysis with Tableau",
+    slug: "data-analysis-with-tableau",
+    test: "https://www.proprofs.com/quiz-school/ugc/story.php?title=data-analytics-with-tableau-and-power-bi-quiz",
+  },
+
+  {
+    id: "6638ae1ec6432b893cb0c915",
+    title: "Data Analysis with Looker Studio",
+    slug: "data-analysis-with-looker-studio",
+    test: "https://www.proprofs.com/quiz-school/ugc/story.php?title=fundamentals-of-data-analysis-evaluation-quiz",
+  },
+
+  // https://www.proprofs.com/quiz-school/ugc/story.php?title=fundamentals-of-data-analysis-evaluation-quiz
 ];

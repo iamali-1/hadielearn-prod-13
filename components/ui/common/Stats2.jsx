@@ -44,7 +44,7 @@ const CounterBox = ({ counter, title, color, image, Icon }) => {
     }
   };
   return (
-    <div className="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12 mb-1 ">
+    <div className="col-12 col-lg-3 col-md-6  mb-1 ">
       <Card hoverable>
         <div className="d-flex align-items-center gap-3" style={{ color: "#135c6c" }}>
           {Icon && Icon}
@@ -76,10 +76,7 @@ const Stats2 = () => {
         <div className="row mb-30">
 
 
-          {/* <SingleCount counter={1500} title="Live classes" />
-            <SingleCount counter={30000} title="Enrolled Students" />
-            <SingleCount counter={3000} title="Students on waitlist" />
-            <SingleCount counter={50000} title="Queries answered" /> */}
+
 
           <CounterBox counter={40000} title="Enrolled students" image={'enrolled_students'} />
           <CounterBox counter={17000} title="Students Accommodated" image={'queries_answered'} />
