@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 import { FaCheck } from "react-icons/fa";
 
@@ -68,12 +69,12 @@ const Background = () => {
               <div className="row">
                 <div className="col-xl-7 col-sm-6">
                   <div className="achievement__thumb m-img pl-30 text-right">
-                    <img src="/images/about/left.webp" alt="achievement-1" style={{ borderRadius: "10px" }} />
+                    <Image src="/images/about/compress/left.webp" alt="achievement-1" height={500} width={300} style={{ borderRadius: "10px" }} />
                   </div>
                 </div>
                 <div id="bgImg" className="col-xl-5 col-sm-6 d-none d-md-none d-lg-none d-xl-block">
                   <div className="achievement__thumb w-img">
-                    <img src="/images/about/right.webp" alt="" style={{ borderRadius: "10px" }} />
+                    <Image src="/images/about/compress/right.webp" width={250} height={400} alt="" style={{ borderRadius: "10px" }} />
                   </div>
                 </div>
               </div>

@@ -49,7 +49,7 @@ const HomeAboutFeatures = () => {
                       Get to <br />
                       know Hadi
                     </h2>
-                  </div>
+                  </div>F
                 </div>
                 <p>
                   Meet our mascot, Hadi. Hadi is your digital leader and will lead you through specially structured computer short courses that will not only enhance your IT skills but will also help you navigate efficiency through your career path.

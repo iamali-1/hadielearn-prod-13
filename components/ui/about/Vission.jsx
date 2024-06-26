@@ -7,7 +7,7 @@ const Vission = ({ image }) => {
         <div
           className="expart__thumb"
           style={{
-            backgroundImage: `url(/images/about/vission.webp`,
+            backgroundImage: `url(/images/about/compress/vision.webp`,
             backgroundPosition: "center",
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",

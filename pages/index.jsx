@@ -14,6 +14,7 @@ import Testimonials from "@/components/ui/common/Testimoniols";
 // import CourseCats from "@/components/ui/home/CourseCats";
 import Stats2 from "@/components/ui/common/Stats2";
 import Tops from "@/components/ui/common/Tops";
+// import HomeAboutFeatures from "@/components/ui/home/HomeAboutFeatures";
 
 const Home = ({ courses }) => {
   const { screen } = useScreens();

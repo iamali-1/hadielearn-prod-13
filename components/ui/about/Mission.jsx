@@ -6,7 +6,7 @@ const Mission = () => {
         <div
           className="expart__thumb"
           style={{
-            backgroundImage: `url(/images/about/mission.webp`,
+            backgroundImage: `url(/images/about/compress/mission.webp`,
             backgroundPosition: "center",
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",

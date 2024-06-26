@@ -10,7 +10,7 @@ const Platform = () => {
           <div className="row pt-4">
             <div className="col-xl-7 col-lg-6">
               <div className="about__thumb-2 p-relative m-img  text-center ">
-                <Image height={500} width={600} src="/images/about/abouthadi.png" alt="" />
+                <Image height={500} width={600} src="/images/about/compress/abouthadi.webp" alt="" />
               </div>
             </div>
             <div className="col-xl-5 col-lg-6">

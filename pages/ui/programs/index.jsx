@@ -2,7 +2,7 @@ import CourseCard from "@/components/ui/common/CourseCard";
 import Footer from "@/components/ui/common/Footer";
 import Tops from "@/components/ui/common/Tops";
 import { API } from "@/config/APIs";
-import { Select } from "antd";
+// import { Select } from "antd";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { FaSearch } from "react-icons/fa";
@@ -34,7 +34,7 @@ const CourseList = ({ list, searchQuery }) => {
 
   return <div className="container pb-5">
     <div className="row mt-100">
-      <div className="d-flex justify-content-end mb-3">
+      {/* <div className="d-flex justify-content-end mb-3">
         <Select
           defaultValue="all"
           style={{ width: 120 }}
@@ -45,7 +45,7 @@ const CourseList = ({ list, searchQuery }) => {
             { value: 'paid', label: 'Advance' },
           ]}
         />
-      </div>
+      </div> */}
       {filteredCourses?.map((course) => (
         <React.Fragment key={course?.slug}>
           {course?.show2 && (

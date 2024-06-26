@@ -8,13 +8,13 @@ const FreeFlow = () => {
           <h2 className="myH2">Explore our available program list</h2>
         </div>
         <div className="left-box-image">
-          <img src="/images/how-it-works/1st.png" />
+          <img src="/images/how-it-works/compress/explore.webp" />
         </div>
       </div>
 
       <div id="rightBox">
         <div className="right-box-image">
-          <img src="/images/how-it-works/2nd.png" />
+          <img src="/images/how-it-works/compress/whatsapp.webp" />
         </div>
 
         <div className="right-box-content">
@@ -29,13 +29,13 @@ const FreeFlow = () => {
           <h2 className="myH2">Choose the program that suits you the best </h2>
         </div>
         <div className="left-box-image2">
-          <img src="/images/how-it-works/3rd.png" />
+          <img src="/images/how-it-works/compress/chose.webp" />
         </div>
       </div>
 
       <div id="rightBox">
         <div className="right-box-image2">
-          <img src="/images/how-it-works/4th.png" />
+          <img src="/images/how-it-works/compress/form.webp" />
         </div>
 
         <div className="right-box-content">
@@ -51,13 +51,13 @@ const FreeFlow = () => {
           <h2 className="myH2">Take the Test</h2>
         </div>
         <div className="left-box-image3">
-          <img src="/images/how-it-works/5th.png" />
+          <img src="/images/how-it-works/compress/test.webp" />
         </div>
       </div>
 
       <div id="rightBox-pass">
         <div className="right-box-pass-image2">
-          <img src="/images/how-it-works/Pass.png" />
+          <img src="/images/how-it-works//compress/pass.webp" />
         </div>
 
         <div className="right-box-content-pass">
@@ -79,13 +79,13 @@ const FreeFlow = () => {
           {/* </a> */}
         </div>
         <div className="left-box-image3-fail">
-          <img src="/images/how-it-works/Fail.png" />
+          <img src="/images/how-it-works/compress/fail.webp" />
         </div>
       </div>
 
       <div id="rightBox3">
         <div className="right-box-image3">
-          <img src="/images/how-it-works/6th.png" />
+          <img src="/images/how-it-works/compress/repeat.webp" />
         </div>
 
         <div className="right-box-content3">
