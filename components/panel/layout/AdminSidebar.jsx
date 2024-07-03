@@ -30,7 +30,7 @@ const AdminSidebar = ({ from = "without-sidebar" }) => {
       <Menu.Item className="mt-3" icon={<HomeOutlined />} style={active("/", router) ? navsStyle : {}}>
         Home
       </Menu.Item>
-      <Menu.Item className="mt-1" icon={<MdOutlineDashboardCustomize />}>
+      {/* <Menu.Item className="mt-1" icon={<MdOutlineDashboardCustomize />}>
         Dashboard
       </Menu.Item>
       <Menu.Item className="mt-1" icon={<BsClipboard2Check />}>
@@ -38,7 +38,7 @@ const AdminSidebar = ({ from = "without-sidebar" }) => {
       </Menu.Item>
       <Menu.Item className="mt-1" icon={<RxActivityLog />}>
         Activity Logs
-      </Menu.Item>
+      </Menu.Item> */}
 
       <Menu.Item onClick={() => router.push("/cms")} className="mt-3" icon={<FaWordpress />}>
         CMS

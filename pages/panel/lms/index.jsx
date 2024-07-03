@@ -1,4 +1,5 @@
 import LMSLayout from "@/components/panel/lms/LMSLayout";
+import Stats2 from "@/components/ui/common/Stats2";
 
 import { Card, Grid } from "antd";
 import { useState } from "react";
@@ -39,14 +40,16 @@ const CounterBox = ({ counter, title, color, image }) => {
 
 const LMS = () => {
   return <LMSLayout>
-    <div className="row mb-30">
+    {/* <div className="row mb-30"> */}
 
-      <CounterBox counter={1500} title="Total Enrollments" image={'live_classes'} />
+      {/* <CounterBox counter={1500} title="Total Enrollments" image={'live_classes'} />
       <CounterBox counter={30000} title="Courses" image={'enrolled_Students'} />
       <CounterBox counter={3000} title="Workshops" image={'students_on_waitlist'} />
-      <CounterBox counter={50000} title="Students" image={'queries_answered'} />
+      <CounterBox counter={50000} title="Students" image={'queries_answered'} /> */}
 
-    </div>
+      <Stats2 />
+
+    {/* </div> */}
 
 
   </LMSLayout>;
