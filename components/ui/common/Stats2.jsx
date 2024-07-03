@@ -38,7 +38,7 @@ const SingleCount = ({ counter, title, color }) => {
 };
 
 
-const CounterBox = ({ counter, title, color, image, Icon }) => {
+const CounterBox = ({ counter, title, color, image, Icon, from }) => {
   const [viewCountUp, setViewCountUp] = useState(false);
 
   const onVisibilityChange = (isVisible) => {
@@ -56,7 +56,7 @@ const CounterBox = ({ counter, title, color, image, Icon }) => {
             <b style={{ color: "#135c6c", fontSize: "30px" }}>
               <VisibilitySensor onChange={onVisibilityChange} offset={{ top: 10 }} delayedCall>
                 <>
-                  <CountUp end={viewCountUp ? counter : 0} duration={8} /> <span>+</span>
+                  <CountUp end={viewCountUp ? counter : 0} duration={8} /> <span>{from === "admins" ? "" : "+"}</span>
                 </>
               </VisibilitySensor>
             </b>
@@ -77,7 +77,7 @@ const Stats2 = ({ from = "homepage" }) => {
   const enrollmentCount = async () => {
     try {
       const { data } = await axios.get(`${API}/enrollment-count`);
-      setTotal(data?.total)
+      setTotal(data?.total - 619)
     } catch (error) {
       toast.error("Please try again...");
     }
@@ -91,11 +91,11 @@ const Stats2 = ({ from = "homepage" }) => {
     <section className={`counter__area ${points.md ? `${from === "admins" ? "" : 'pt-150'} ` : 'pt-10'}`}>
       <div className="container">
         <div className="row mb-30">
-          <CounterBox counter={Total} title="Enrolled students" image={'enrolled_students'} />
-          <CounterBox counter={17000} title="Students Accommodated" image={'queries_answered'} />
-          <CounterBox counter={4000} title="Certified students" Icon={<AiOutlineSafetyCertificate size={50} />} />
-          <CounterBox counter={600} title="Internships Provided" Icon={<IoIosGitNetwork size={50} />} />
-          <CounterBox counter={950} title="Success Stories" image={'live_classes'} />
+          <CounterBox from={from} counter={Total} title="Enrolled students" image={'enrolled_students'} />
+          <CounterBox from={from} counter={17000} title="Students Accommodated" image={'queries_answered'} />
+          <CounterBox from={from} counter={4000} title="Certified students" Icon={<AiOutlineSafetyCertificate size={50} />} />
+          <CounterBox from={from} counter={600} title="Internships Provided" Icon={<IoIosGitNetwork size={50} />} />
+          <CounterBox from={"homepage"} counter={950} title="Success Stories" image={'live_classes'} />
         </div>
       </div>
     </section>
