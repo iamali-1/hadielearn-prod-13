@@ -42,12 +42,12 @@ const LMS = () => {
   return <LMSLayout>
     {/* <div className="row mb-30"> */}
 
-      {/* <CounterBox counter={1500} title="Total Enrollments" image={'live_classes'} />
+    {/* <CounterBox counter={1500} title="Total Enrollments" image={'live_classes'} />
       <CounterBox counter={30000} title="Courses" image={'enrolled_Students'} />
       <CounterBox counter={3000} title="Workshops" image={'students_on_waitlist'} />
       <CounterBox counter={50000} title="Students" image={'queries_answered'} /> */}
 
-      <Stats2 />
+    <Stats2 from="admins" />
 
     {/* </div> */}
 

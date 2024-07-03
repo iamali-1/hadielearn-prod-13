@@ -1,10 +1,13 @@
 import { Card, Grid } from "antd";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import CountUp from "react-countup";
 import VisibilitySensor from "react-visibility-sensor";
 import { IoIosGitNetwork } from "react-icons/io";
 import { AiOutlineSafetyCertificate } from "react-icons/ai";
+import axios from "axios";
+import { API } from "@/config/APIs";
+import toast from "react-hot-toast";
 
 
 
@@ -65,27 +68,34 @@ const CounterBox = ({ counter, title, color, image, Icon }) => {
   )
 }
 
-const Stats2 = () => {
+const Stats2 = ({ from = "homepage" }) => {
 
   const points = Grid.useBreakpoint()
 
+  const [Total, setTotal] = useState(0)
+
+  const enrollmentCount = async () => {
+    try {
+      const { data } = await axios.get(`${API}/enrollment-count`);
+      setTotal(data?.total)
+    } catch (error) {
+      toast.error("Please try again...");
+    }
+  }
+
+  useEffect(() => {
+    enrollmentCount()
+  }, []);
+
   return (
-    <section className={`counter__area ${points.md ? 'pt-150' : 'pt-10'}`}>
+    <section className={`counter__area ${points.md ? `${from === "admins" ? "" : 'pt-150'} ` : 'pt-10'}`}>
       <div className="container">
-
         <div className="row mb-30">
-
-
-
-
-          <CounterBox counter={40000} title="Enrolled students" image={'enrolled_students'} />
+          <CounterBox counter={Total} title="Enrolled students" image={'enrolled_students'} />
           <CounterBox counter={17000} title="Students Accommodated" image={'queries_answered'} />
           <CounterBox counter={4000} title="Certified students" Icon={<AiOutlineSafetyCertificate size={50} />} />
           <CounterBox counter={600} title="Internships Provided" Icon={<IoIosGitNetwork size={50} />} />
-
           <CounterBox counter={950} title="Success Stories" image={'live_classes'} />
-
-
         </div>
       </div>
     </section>
