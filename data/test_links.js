@@ -139,7 +139,7 @@ export const test_links = [
     id: "6699fdf6dfd3304181758917",
     title: "Canva - 14 Days Crash Course",
     slug: "canva-14-days-crash-course",
-    test: "",
+    test: "https://www.proprofs.com/quiz-school/ugc/story.php?title=nda0otuwoazg4l",
   },
 
   // https://www.proprofs.com/quiz-school/ugc/story.php?title=fundamentals-of-data-analysis-evaluation-quiz
