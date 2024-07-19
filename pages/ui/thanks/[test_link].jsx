@@ -21,10 +21,10 @@ const FreeThanks = ({ finddedTest }) => {
     <br />
     <span style={{ fontSize: "25px", fontWeight: "bold" }}>
 
-      {finddedTest?.title} Quiz Link:
-      <a style={{ color: "#6da1ed" }} className="mx-4" href={finddedTest?.test} target="_blank">
+      {finddedTest?.title} {finddedTest?.test && "Quiz Link :"}
+      {finddedTest?.test && <a style={{ color: "#6da1ed" }} className="mx-4" href={finddedTest?.test} target="_blank">
         Go for quiz <BiLinkExternal />
-      </a>
+      </a>}
 
     </span>
     <br />
