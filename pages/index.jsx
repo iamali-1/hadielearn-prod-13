@@ -33,6 +33,7 @@ const Home = ({ courses }) => {
 
 
       <Stats2 />
+  
       {/* <HomeAboutFeatures /> */}
       <HomeAbout />
       {/* <CourseCats /> */}

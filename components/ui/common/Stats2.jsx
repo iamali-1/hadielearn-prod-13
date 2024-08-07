@@ -92,10 +92,10 @@ const Stats2 = ({ from = "homepage" }) => {
       <div className="container">
         <div className="row mb-30">
           <CounterBox from={from} counter={Total} title="Enrolled students" image={'enrolled_students'} />
-          <CounterBox from={from} counter={from === "admins" ? 17300 : 17000} title="Students Accommodated" image={'queries_answered'} />
-          <CounterBox from={from} counter={from === "admins" ? 4015 : 4000} title="Certified students" Icon={<AiOutlineSafetyCertificate size={50} />} />
-          <CounterBox from={from} counter={from === "admins" ? 609 : 600} title="Internships Provided" Icon={<IoIosGitNetwork size={50} />} />
-          <CounterBox from={"homepage"} counter={950} title="Success Stories" image={'live_classes'} />
+          <CounterBox from={from} counter={from === "admins" ? 17300 : 17500} title="Students Accommodated" image={'queries_answered'} />
+          <CounterBox from={from} counter={from === "admins" ? 4015 : 4080} title="Certified students" Icon={<AiOutlineSafetyCertificate size={50} />} />
+          <CounterBox from={from} counter={from === "admins" ? 609 : 612} title="Internships Provided" Icon={<IoIosGitNetwork size={50} />} />
+          <CounterBox from={"homepage"} counter={962} title="Success Stories" image={'live_classes'} />
         </div>
       </div>
     </section>
