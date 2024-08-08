@@ -50,7 +50,7 @@ const UsersComponent = () => {
 
                     {auth?.user?._id !== x._id && (
                       <td className="text-dark">
-                        <BiEdit style={{ cursor: "pointer" }} onClick={() => router.push(`/cms-test/users/${x._id}`)} />
+                        <BiEdit style={{ cursor: "pointer" }} onClick={() => router.push(`/cms/accounts/single/${x._id}`)} />
                       </td>
                     )}
 
