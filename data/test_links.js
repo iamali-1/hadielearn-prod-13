@@ -142,5 +142,12 @@ export const test_links = [
     test: "https://www.proprofs.com/quiz-school/ugc/story.php?title=nda0otuwoazg4l",
   },
 
+  {
+    id: "66b4b5ea775fb8d33accaf94",
+    title: "Fundamentals of DevOps",
+    slug: "fundamentals-of-devops",
+    test: "https://www.proprofs.com/quiz-school/ugc/story.php?title=fundamentals-of-devops",
+  },
+
   // https://www.proprofs.com/quiz-school/ugc/story.php?title=fundamentals-of-data-analysis-evaluation-quiz
 ];
