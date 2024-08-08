@@ -99,6 +99,11 @@ const ProgramDetail = ({ course }) => {
                         FAQs
                       </span>
                     </li>
+                    <li className="nav-item">
+                      <span id="navLinks" className={`nav-link  ${activeTabs === "seventh" ? "active" : ""}`} onClick={(e) => setactiveTabs("seventh")} aria-current="page">
+                        Certification Criteria
+                      </span>
+                    </li>
                   </ul>
 
                   {/* outlines */}
@@ -155,6 +160,21 @@ const ProgramDetail = ({ course }) => {
                   {activeTabs === "sixth" && (
                     <div className="pt-30 ">
                       <FaqsCourseDetail details={course?.faqs} page={"FAQs"} />
+                    </div>
+                  )}
+
+
+                  {activeTabs === "seventh" && (
+                    <div className="pt-30 px-4 ">
+
+                      <div id="horizontalTab_lists">
+                        <ul>
+                          <li>Maintain at least 70% attendance.</li>
+                          <li>Complete all assignments on time and to the instructor's satisfaction.</li>
+                          <li>Submit a video testimonial.</li>
+                          <li>Provide a Google Review of the institute.</li>
+                        </ul>
+                      </div>
                     </div>
                   )}
 
