@@ -7,10 +7,12 @@ import { Card } from "antd";
 import React from "react";
 import { FaUsers } from "react-icons/fa";
 import { BiEdit, BiTrash } from "react-icons/bi";
+import { useRouter } from "next/router";
 
 const UsersComponent = () => {
   const [auth] = useAuth();
   const { loading, list, deleteUser } = usersTable();
+  const router = useRouter();
 
   return (
     <Card>
