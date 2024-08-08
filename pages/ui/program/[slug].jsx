@@ -169,7 +169,7 @@ const ProgramDetail = ({ course }) => {
 
                       <div id="horizontalTab_lists">
                         <ul>
-                          <li>Maintain at least 70% attendance.</li>
+                          <li>Maintain at least 70% attendance</li>
                           <li>Complete all assignments on time and to the instructor's satisfaction.</li>
                           <li>Submit a video testimonial.</li>
                           <li>Provide a Google Review of the institute.</li>
