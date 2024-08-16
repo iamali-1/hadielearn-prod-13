@@ -22,6 +22,8 @@ const privacyAndPolicy = () => {
             Date&quot; at the top of this Privacy Policy. You are encouraged to review this Privacy Policy periodically to stay informed of updates. By continuing to use the Site
             after such changes are made, you acknowledge your acceptance of the revised Privacy Policy.
           </p>
+          <p>
+            By submitting a video testimonial, you agree to the use of your video across our social media platforms and marketing channels. Your submission may be edited for clarity and length, but your personal information will remain confidential by our privacy policy.    </p>
           <h4>Information We Collect</h4>
           <p>
             <ul className="list-group list-group-flush">
