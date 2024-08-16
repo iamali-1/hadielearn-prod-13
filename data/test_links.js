@@ -118,14 +118,14 @@ export const test_links = [
     id: "65f3ff2a91ba9bb56e00d605",
     title: "Data Analysis with Microsoft Power BI",
     slug: "data-analysis-with-microsoft-power-bi",
-    test: "https://www.proprofs.com/quiz-school/ugc/story.php?title=data-analytics-with-tableau-and-power-bi-quiz",
+    test: "https://sawal.co/attempt-quiz/6656d2e9b2f2bc346ce344f3/66bb6172bb18cf8063a70ae8",
   },
 
   {
     id: "65f3fbb691ba9bb56e00d596",
     title: "Data Analysis with Tableau",
     slug: "data-analysis-with-tableau",
-    test: "https://www.proprofs.com/quiz-school/ugc/story.php?title=data-analytics-with-tableau-and-power-bi-quiz",
+    test: "https://sawal.co/attempt-quiz/6656d2e9b2f2bc346ce344f3/669f468b895c6dc3e98b0e8c",
   },
 
   {
@@ -139,14 +139,14 @@ export const test_links = [
     id: "6699fdf6dfd3304181758917",
     title: "Canva - 14 Days Crash Course",
     slug: "canva-14-days-crash-course",
-    test: "https://www.proprofs.com/quiz-school/ugc/story.php?title=nda0otuwoazg4l",
+    test: "https://sawal.co/attempt-quiz/6656d2e9b2f2bc346ce344f3/66bdfc810d73734a51eb1f5a",
   },
 
   {
     id: "66b4b5ea775fb8d33accaf94",
     title: "Fundamentals of DevOps",
     slug: "fundamentals-of-devops",
-    test: "https://www.proprofs.com/quiz-school/ugc/story.php?title=fundamentals-of-devops",
+    test: "https://sawal.co/attempt-quiz/6656d2e9b2f2bc346ce344f3/66bb4140bb18cf8063a701c5",
   },
 
   // https://www.proprofs.com/quiz-school/ugc/story.php?title=fundamentals-of-data-analysis-evaluation-quiz
