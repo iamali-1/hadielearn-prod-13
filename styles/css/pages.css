@@ -1058,3 +1058,16 @@
   border: 1px solid #0f3f5d !important;
   background-color: white;
 }
+
+.deleteBtn {
+  outline: none !important;
+  background-color: #950707;
+  border: 1px solid #950707 !important;
+  color: white;
+}
+
+.deleteBtn:hover {
+  color: #950707 !important;
+  border: 1px solid #950707 !important;
+  background-color: white;
+}

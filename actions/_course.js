@@ -129,7 +129,7 @@ export const useCourseList = () => {
         },
       });
       setList(data.courses);
-      console.log(data.courses, "here");
+      // console.log(data.courses, "here");
       setLoading(false);
     } catch (error) {
       setLoading(false);

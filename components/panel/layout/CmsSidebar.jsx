@@ -8,6 +8,7 @@ import { FaChalkboardTeacher, FaPlus } from "react-icons/fa";
 import { active, navsStyle } from "@/components/ui/common/active";
 import { useAuth } from "@/context/authContext";
 import Logo from "@/components/ui/common/Logo";
+import { BiStats } from "react-icons/bi";
 
 const CmsSidebar = ({ from = "without-sidebar" }) => {
   const router = useRouter();
@@ -33,6 +34,9 @@ const CmsSidebar = ({ from = "without-sidebar" }) => {
       </Menu.Item>
       <Menu.Item className="mt-1" icon={<MdOutlineDashboardCustomize />}>
         Dashboard
+      </Menu.Item>
+      <Menu.Item className="mt-1" onClick={() => router.push("/cms/stats")} icon={<BiStats />}>
+        Stats
       </Menu.Item>
       <Menu.Item className="mt-3" onClick={() => router.push("/cms/accounts/users")} icon={<FaChalkboardTeacher />}>
         Instructors
