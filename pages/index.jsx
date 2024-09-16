@@ -30,7 +30,7 @@ const Home = ({ courses, stats }) => {
       />
       <ResponsiveHero />
 
-      <Stats2 stats={stats} />
+      {stats && <Stats2 stats={stats} />}
 
       {/* <HomeAboutFeatures /> */}
       <HomeAbout />
