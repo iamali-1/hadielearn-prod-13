@@ -4,25 +4,27 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import CreateStatForm from "./createStatsForm";
 
-
-
-
-
-const AllStatsAdmin = ({ stats, loading, editStats, setEditStats, selected, setSelected, setStats, deleteStats, loadingDelete }) => {
-
-
+const AllStatsAdmin = ({
+  stats,
+  loading,
+  editStats,
+  setEditStats,
+  selected,
+  setSelected,
+  setStats,
+  deleteStats,
+  loadingDelete,
+}) => {
   // const [stats, setStats] = useState([]);
   // const [loading, setLoading] = useState(true);
   // const [editStats, setEditStats] = useState(false)
   // const [selected, setSelected] = useState({})
 
-
-
   const columns = [
     {
-      title: 'Icon',
-      dataIndex: 'svgIcon',
-      key: 'svgIcon',
+      title: "Icon",
+      dataIndex: "svgIcon",
+      key: "svgIcon",
       render: (text, record) => (
         <Image
           width={50}
@@ -33,38 +35,37 @@ const AllStatsAdmin = ({ stats, loading, editStats, setEditStats, selected, setS
       ),
     },
     {
-      title: 'Title',
-      dataIndex: 'title',
-      key: 'title',
+      title: "Title",
+      dataIndex: "title",
+      key: "title",
     },
     {
-      title: 'Number',
-      dataIndex: 'number',
-      key: 'number',
+      title: "Number",
+      dataIndex: "number",
+      key: "number",
     },
     {
-      title: 'Enabled',
-      dataIndex: 'enabled',
-      key: 'enabled',
+      title: "Enabled",
+      dataIndex: "enabled",
+      key: "enabled",
       render: (enabled, record) => (
         <Switch
           checked={enabled}
           onChange={(checked) => handleToggleEnabled(record._id, checked)}
         />
-
       ),
     },
 
     {
-      title: 'Action',
-      dataIndex: '',
-      key: 'edit',
+      title: "Action",
+      dataIndex: "",
+      key: "edit",
       render: (_, record) => (
         <div className="d-flex gap-2">
           <Button
             onClick={() => {
-              setSelected(record)
-              setEditStats(true)
+              setSelected(record);
+              setEditStats(true);
             }}
             type="dashed"
           >
@@ -74,39 +75,34 @@ const AllStatsAdmin = ({ stats, loading, editStats, setEditStats, selected, setS
             onClick={() => deleteStats(record?._id)}
             loading={loadingDelete}
             className="deleteBtn"
-
           >
             Delete
           </Button>
         </div>
-
       ),
     },
   ];
 
   const handleToggleEnabled = async (id, enabled) => {
     try {
-      console.log({ enabled })
-      const response = await axios.put(`${API}/stat/update-stat/${id}`, { enabled });
+      console.log({ enabled });
+      const response = await axios.put(`${API}/stat/update-stat/${id}`, {
+        enabled,
+      });
 
       // if (!response.ok) {
       //   throw new Error('Failed to update stat');
       // }
 
-      message.success('Stat updated successfully!');
+      message.success("Stat updated successfully!");
       setStats((prevStats) =>
-        prevStats.map((stat) =>
-          stat._id === id ? { ...stat, enabled } : stat
-        )
+        prevStats.map((stat) => (stat._id === id ? { ...stat, enabled } : stat))
       );
     } catch (error) {
-      console.log(error)
+      console.log(error);
       message.error(error.message);
     }
   };
-
-
-
 
   return (
     <>
@@ -119,7 +115,7 @@ const AllStatsAdmin = ({ stats, loading, editStats, setEditStats, selected, setS
 
       {/* <DrawerToEdit open={editStats} setOpen={setEditStats} selected={selected} after={fetchStats} setSelected={setSelected} /> */}
     </>
-  )
-}
+  );
+};
 
-export default AllStatsAdmin
+export default AllStatsAdmin;

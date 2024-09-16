@@ -16,12 +16,11 @@ import Stats2 from "@/components/ui/common/Stats2";
 import Tops from "@/components/ui/common/Tops";
 // import HomeAboutFeatures from "@/components/ui/home/HomeAboutFeatures";
 
-const Home = ({ courses }) => {
+const Home = ({ courses, stats }) => {
   const { screen } = useScreens();
 
   return (
     <>
-
       <Tops
         title={"Hadi E-learning - An excellent online learning platform"}
         desc={
@@ -31,9 +30,8 @@ const Home = ({ courses }) => {
       />
       <ResponsiveHero />
 
+      <Stats2 stats={stats} />
 
-      <Stats2 />
-  
       {/* <HomeAboutFeatures /> */}
       <HomeAbout />
       {/* <CourseCats /> */}
@@ -53,9 +51,12 @@ const Home = ({ courses }) => {
 
 export async function getServerSideProps() {
   const { data } = await axios.get(`${API}/courses2`);
+  const res = await axios.get(`${API}/stat/all-stats`);
+
   return {
     props: {
       courses: data.courses,
+      stats: res.data,
     },
   };
 }

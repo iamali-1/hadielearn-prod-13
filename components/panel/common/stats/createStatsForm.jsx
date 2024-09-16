@@ -1,27 +1,25 @@
-import React, { useEffect } from 'react'
-import { Form, Input, Button, Upload, Switch, message } from 'antd';
-import { UploadOutlined } from '@ant-design/icons';
-import useForm from '@/actions/common/useForm';
+import React, { useEffect } from "react";
+import { Form, Input, Button, Upload, Switch, message } from "antd";
+import { UploadOutlined } from "@ant-design/icons";
+import useForm from "@/actions/common/useForm";
 
-const CreateStatForm = ({ onSubmit, loading, initValues }) => {
-
-  const { values, errors, handleChange, handleFileChange, resetForm } = useForm(initValues);
+const CreateStatForm = ({ onSubmit, loading, initValues, from = "create" }) => {
+  const { values, errors, handleChange, handleFileChange, resetForm } =
+    useForm(initValues);
 
   const handleSubmit = () => {
     if (!values.icon) {
-      message.error('Please upload an icon.');
+      message.error("Please upload an icon.");
       return;
     }
     if (errors.icon) {
       message.error(errors.icon);
       return;
     }
-    console.log('Form values:', values);
+    console.log("Form values:", values);
     onSubmit(values);
     resetForm();
   };
-
-
 
   return (
     <Form layout="vertical" onFinish={handleSubmit}>
@@ -44,9 +42,11 @@ const CreateStatForm = ({ onSubmit, loading, initValues }) => {
       </Form.Item>
       <Form.Item label="Enabled">
         <Switch
-          size='small'
+          size="small"
           checked={values.enabled}
-          onChange={(checked) => handleChange({ target: { name: 'enabled', value: checked } })}
+          onChange={(checked) =>
+            handleChange({ target: { name: "enabled", value: checked } })
+          }
         />
       </Form.Item>
       <Form.Item label="Upload Icon" required>
@@ -59,15 +59,15 @@ const CreateStatForm = ({ onSubmit, loading, initValues }) => {
           <Button icon={<UploadOutlined />}>Click to Upload</Button>
         </Upload>
         {values.icon && <p>Selected file: {values.icon.name}</p>}
-        {errors.icon && <p style={{ color: 'red' }}>{errors.icon}</p>}
+        {errors.icon && <p style={{ color: "red" }}>{errors.icon}</p>}
       </Form.Item>
       <Form.Item>
-        <Button className='myBtn' htmlType="submit" loading={loading}>
-          Create Stat
+        <Button className="myBtn" htmlType="submit" loading={loading}>
+          {from === "edit" ? "Edit" : "Create Stat"}
         </Button>
       </Form.Item>
     </Form>
-  )
-}
+  );
+};
 
-export default CreateStatForm
+export default CreateStatForm;
