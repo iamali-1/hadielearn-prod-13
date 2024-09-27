@@ -45,7 +45,7 @@ export const test_links = [
     _id: "648d8138f3a3283005bbf5b7",
     title: "Video Editing Mastery Course",
     slug: "video-editing-mastery-course",
-    test: " https://www.proprofs.com/quiz-school/ugc/story.php?title=video-editing-mastery-course-evaluation-quiz",
+    test: " https://sawal.co/attempt-quiz/6656d2e9b2f2bc346ce344f3/66f50d43f84842b38a64f35c",
   },
   {
     _id: "648d852ff3a3283005bbf62d",
@@ -63,7 +63,7 @@ export const test_links = [
     _id: "64a92f4e221ade6d4cb2b64e",
     title: "React JS Mastery Course",
     slug: "react-js-mastery-course",
-    test: "https://www.proprofs.com/quiz-school/ugc/story.php?title=mzgwmjyznw94fo",
+    test: "https://sawal.co/attempt-quiz/6656d2e9b2f2bc346ce344f3/66f510c2f84842b38a64f73b",
   },
   {
     _id: "64e87448845222690ed2502c",
@@ -132,7 +132,7 @@ export const test_links = [
     id: "6638ae1ec6432b893cb0c915",
     title: "Data Analysis with Looker Studio",
     slug: "data-analysis-with-looker-studio",
-    test: "https://www.proprofs.com/quiz-school/ugc/story.php?title=fundamentals-of-data-analysis-evaluation-quiz",
+    test: "https://sawal.co/attempt-quiz/6656d2e9b2f2bc346ce344f3/66f514cff84842b38a64fa0a",
   },
 
   {
@@ -148,6 +148,4 @@ export const test_links = [
     slug: "fundamentals-of-devops",
     test: "https://sawal.co/attempt-quiz/6656d2e9b2f2bc346ce344f3/66bb4140bb18cf8063a701c5",
   },
-
-  // https://www.proprofs.com/quiz-school/ugc/story.php?title=fundamentals-of-data-analysis-evaluation-quiz
 ];
