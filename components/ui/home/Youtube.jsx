@@ -5,7 +5,7 @@ const Youtube = () => {
     
     'https://www.youtube.com/embed/pKLH8jcJUEI',
     'https://www.youtube.com/embed/U7bexe8MyLI?autoplay=1', 
-    'https://www.youtube.com/embed/u0nWHkimd0Q'  
+    'https://www.youtube.com/embed/u0nWHkimd0Q' 
   ];
 
   return (
