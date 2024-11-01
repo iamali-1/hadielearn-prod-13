@@ -14,6 +14,7 @@ import Testimonials from "@/components/ui/common/Testimoniols";
 // import CourseCats from "@/components/ui/home/CourseCats";
 import Stats2 from "@/components/ui/common/Stats2";
 import Tops from "@/components/ui/common/Tops";
+import Youtube from "@/components/ui/home/Youtube";
 // import HomeAboutFeatures from "@/components/ui/home/HomeAboutFeatures";
 
 const Home = ({ courses, stats }) => {
@@ -29,9 +30,9 @@ const Home = ({ courses, stats }) => {
         conLink={"https://hadielearning.com/"}
       />
       <ResponsiveHero />
-
-      {stats && <Stats2 stats={stats} />}
-
+      <div style={{ margin: '40px 0' }}>
+        <Youtube />
+      </div>
       {/* <HomeAboutFeatures /> */}
       <HomeAbout />
       {/* <CourseCats /> */}
