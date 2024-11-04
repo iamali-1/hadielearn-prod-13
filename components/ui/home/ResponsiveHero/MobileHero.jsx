@@ -66,7 +66,7 @@ const MobileHero = () => {
                       <h2>
                         Hadi <br /> E-learning
                       </h2>
-                      <p className="text-light">Hadi E-Learning: Quality IT training in Pakistan. Subsidized courses for accessibility.</p>
+                      <p className="text-light">Elevate your skill set with training in futuristic fields</p>
                       <Link href="/programs">
                         <button className="z-btn">Programs</button>
                       </Link>

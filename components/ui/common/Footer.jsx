@@ -188,7 +188,7 @@ const Footer = () => {
                 <div className="col-xl-12">
                   <div className="footer__copyright-text text-center">
                     <p>
-                      Copyright © <Link href={"/auth/login"}>Hadi eLearning</Link> | Developed by{" "}
+                      Copyright © <Link href={"/auth/login"}>Hadi E-Learning</Link> | Developed by{" "}
                       <a href="https://cycarts.com" target="#">
                         Cycarts
                       </a>
