@@ -39,7 +39,7 @@ const MobileHero = () => {
                       <h2>
                         Hadi <br /> E-learning
                       </h2>
-                      <p className="text-light">Hadi E-Learning: Quality IT training in Pakistan. Subsidized courses for accessibility.</p>
+                      <p className="text-light">Hadi E-Learning: Quality IT training in Pakistan.</p>
                       <a href="#sectionArea" className="z-btn">
                         Explore <BsCaretDown size={25} />
                       </a>
