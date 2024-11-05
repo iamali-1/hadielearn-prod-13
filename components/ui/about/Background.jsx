@@ -10,7 +10,7 @@ const Background = () => {
             <div className="col-xl-5 col-lg-6 col-md-6">
               <div className="achievement__content">
                 <div className="section_title section_title-3 mb-20">
-                  <h2>Background</h2>
+                  <h2 style={{color: "#0f3f5d"}}>Background</h2>
                 </div>
                 <p style={{ fontSize: "18px" }}>
                   Pakistan&apos;s economic conditions have gone through turbulence in recent years. This situation has caused a void of opportunities in the countries which has

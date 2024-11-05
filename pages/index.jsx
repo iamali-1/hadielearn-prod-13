@@ -33,6 +33,7 @@ const Home = ({ courses, stats }) => {
       <div style={{ margin: '40px 0' }}>
         <Youtube />
       </div>
+      {stats && <Stats2 stats={stats} />}
       {/* <HomeAboutFeatures /> */}
       <HomeAbout />
       {/* <CourseCats /> */}

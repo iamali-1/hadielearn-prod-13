@@ -54,7 +54,7 @@ const Footer = () => {
                   data-wow-delay=".4s"
                 >
                   <div className="footer__widget-title">
-                    <h3>MENU</h3>
+                    <h3 style={{color: "#0f3f5d" }}>MENU</h3>
                   </div>
                   <div className="footer__widget-content">
                     <div className="footer__links">
@@ -93,7 +93,7 @@ const Footer = () => {
                   data-wow-delay=".6s"
                 >
                   <div className="footer__widget-title">
-                    <h3>Terms</h3>
+                    <h3 style={{color: "#0f3f5d" }}>Terms</h3>
                   </div>
                   <div className="footer__widget-content">
                     <div className="footer__links">
@@ -127,25 +127,26 @@ const Footer = () => {
                   data-wow-delay=".8s"
                 >
                   <div className="footer__widget-title">
-                    <h3>Contact</h3>
+                    <h3 style={{color: "#0f3f5d" }}>Contact</h3>
                   </div>
                   <div className="footer__widget-content">
                     <div className="footer__info mb-35">
                       <ul>
-                        <li>
-                          <div className="icon theme-color ">
-                            <i>
-                              <FaEnvelope />
-                            </i>
-                          </div>
-                          <div className="text theme-color ">
-                            <span>
-                              <a href="mailto:info@hadielearning.com">
-                                info@hadielearning.com
-                              </a>
-                            </span>
-                          </div>
-                        </li>
+                      <li>
+  <div className="icon theme-color" style={{ display: 'inline-block', marginRight: '15px' }}>
+    <i>
+      <FaEnvelope />
+    </i>
+  </div>
+  <div className="text theme-color" style={{ display: 'inline-block' }}>
+    <span>
+      <a href="mailto:info@hadielearning.com">
+        info@hadielearning.com
+      </a>
+    </span>
+  </div>
+</li>
+
 
                         <li>
                           <div className="icon theme-color">
@@ -179,17 +180,18 @@ const Footer = () => {
                         </li>
 
                         <li>
-                          <div className="icon theme-color">
-                            <i>
-                              <CiLocationOn />
-                            </i>
-                          </div>
-                          <div className="text theme-color">
-                            <span>
-                              Hadi E-Learning, Civic Center, Faisal Town Lahore.
-                            </span>
-                          </div>
-                        </li>
+  <div className="icon theme-color" style={{ display: 'inline-block', marginRight: '14px' }}>
+    <i>
+      <CiLocationOn />
+    </i>
+  </div>
+  <div className="text theme-color" style={{ display: 'inline-block' }}>
+    <span>
+      Hadi E-Learning, Civic Center, Faisal Town Lahore.
+    </span>
+  </div>
+</li>
+
                       </ul>
                     </div>
                     <div className="footer__social theme-social">

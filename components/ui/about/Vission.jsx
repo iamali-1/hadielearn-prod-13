@@ -7,7 +7,7 @@ const Vission = ({ image }) => {
         <div
           className="expart__thumb"
           style={{
-            backgroundImage: `url(/images/about/compress/vision.webp`,
+            backgroundImage: `url(/images/about/compress/vision.webp)`,  // Fixed the missing quote
             backgroundPosition: "center",
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
@@ -15,9 +15,8 @@ const Vission = ({ image }) => {
         ></div>
         <div className="row">
           <div className="col-xl-6 col-lg-6 offset-lg-6">
-            {/* <div className="col-xl-12 col-lg-12"> */}
             <div className="expart__content">
-              <h3>The vision we perceived</h3>
+              <h3 style={{ color: "#0f3f5d" }}>The vision we perceived</h3>
               <q>
                 <i>
                   Hadi E-learning is an online IT training program that aims to uplift Pakistani youth through structured free IT training. Hadi’s motto is to enhance IT skills in

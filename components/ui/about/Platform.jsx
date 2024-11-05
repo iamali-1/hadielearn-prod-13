@@ -17,7 +17,7 @@ const Platform = () => {
               {/* <Fade right> */}
               <div className="about__content">
                 <div className="section__title section__title-3 mb-25">
-                  <h2>
+                  <h2 style={{color: "#0f3f5d" }}>
                     How Hadi has <br /> evolved
                   </h2>
                 </div>

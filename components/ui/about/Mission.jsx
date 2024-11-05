@@ -1,4 +1,3 @@
-
 const Mission = () => {
   return (
     <>
@@ -6,7 +5,7 @@ const Mission = () => {
         <div
           className="expart__thumb"
           style={{
-            backgroundImage: `url(/images/about/compress/mission.webp`,
+            backgroundImage: `url(/images/about/compress/mission.webp)`,
             backgroundPosition: "center",
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
@@ -15,7 +14,7 @@ const Mission = () => {
         <div className="row">
           <div className="col-xl-6 col-lg-6 offset-lg-6">
             <div className="expart__content">
-              <h3>The mission we are on</h3>
+              <h3 style={{color: "#0f3f5d" }}>The mission we are on</h3>
               <q>
                 <i>
                   The mission of Hadi E-Learning is to empower the youth with the treasure of technical knowledge. We want our talented youth to excel in this digital age and set

@@ -10,7 +10,7 @@ const Testimonials = () => {
   return (
     <>
       <section
-        className="testimonial__area pb-140 pt-50"
+        className="testimonial__area pb-30 pt-10"
         style={{
           // backgroundColor: " rgba(49, 175, 152, 1)"
           // backgroundImage: "linear-gradient(329deg, rgba(49, 175, 152, 1) 0%, rgba(15, 63, 93, 1) 100%)",
@@ -18,9 +18,9 @@ const Testimonials = () => {
       >
         <div className="container ">
 
-        <div className="section__title section__title-3 mb-30">
+        <div className="section__title section__title-3 mb-60">
   <span style={{ fontSize: '2.5rem', fontWeight: 'bold' }}>Testimonials</span>
-  <h2 style={{ fontSize: '1.5rem', marginTop: '10px' }}>What students are saying</h2>
+  <h2 style={{ fontSize: '1.5rem', marginTop: '10px' , color: "#0f3f5d" }}>What students are saying</h2>
 </div>
 
 

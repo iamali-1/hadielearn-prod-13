@@ -55,7 +55,7 @@ const HomePrograms = ({ courses }) => {
         <div className="row">
           <div className="col-xl-7">
             <div className="section-title section__title-3 ">
-              <h2>Programs Hadi is offering </h2>
+              <h2 style={{color: "#0f3f5d" }}>Programs Hadi is offering </h2>
               <p style={{ fontSize: "18px" }}>
                 We invite you to explore our{" "}
                 <Link href="/programs" className="text-primary">

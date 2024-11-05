@@ -3,12 +3,12 @@ import React from "react";
 const Brands = () => {
   return (
     <>
-      <section className="brand__area p-relative pt-10 pb-100">
+      <section className="brand__area p-relative  pb-100">
         <div className="container p-relative">
           <div className="row">
             <div className="col-xl-6 col-lg-7">
               <div className="section__title section__title-3 wow fadeInUp" data-wow-delay=".2s">
-                <h2 style={{ fontSize: '2.5rem', fontWeight: 'bold' }}>Our Partners</h2>
+                <h2 style={{ fontSize: '2.5rem', fontWeight: 'bold', color: "#0f3f5d" }}>Our Partners</h2>
               </div>
             </div>
           </div>

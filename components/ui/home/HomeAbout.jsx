@@ -23,7 +23,7 @@ const HomeAbout = () => {
             <div className="col-xl-5 col-lg-6">
               <div className="about__content">
                 <div className="section__title section__title-3 mb-25">
-                  <h2>Get to know Hadi</h2>
+                  <h2 style={{color: "#0f3f5d" }}>Get to know Hadi</h2>
                 </div>
                 <p>
                   Meet our mascot, Hadi. Hadi is your digital leader and will lead you through specially structured computer short courses that will not only enhance your IT skills

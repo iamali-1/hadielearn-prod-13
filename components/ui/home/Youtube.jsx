@@ -7,6 +7,7 @@ const Youtube = () => {
   ];
 
   return (
+    <>
     <div style={{
       paddingTop: "70px",
       display: 'flex',
@@ -44,6 +45,8 @@ const Youtube = () => {
         </div>
       ))}
     </div>
+    
+    </>
   );
 };
 
