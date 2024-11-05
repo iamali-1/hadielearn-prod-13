@@ -3,7 +3,7 @@ import React from "react";
 const Brands = () => {
   return (
     <>
-      <section className="brand__area p-relative  pb-100">
+      <section className="brand__area p-relative pt-70  pb-100">
         <div className="container p-relative">
           <div className="row">
             <div className="col-xl-6 col-lg-7">

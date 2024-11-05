@@ -10,7 +10,7 @@ const Testimonials = () => {
   return (
     <>
       <section
-        className="testimonial__area pb-30 pt-10"
+        className="testimonial__area pb-10 pt-10"
         style={{
           // backgroundColor: " rgba(49, 175, 152, 1)"
           // backgroundImage: "linear-gradient(329deg, rgba(49, 175, 152, 1) 0%, rgba(15, 63, 93, 1) 100%)",
