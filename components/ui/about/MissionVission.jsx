@@ -8,7 +8,7 @@ const MissionVission = () => {
   const [tabs, setTabs] = useState('mission')
 
   return (
-    <section className="expart__area pt-200 wow fadeInUp" >
+    <section className="expart__area pt-100 wow fadeInUp" >
       <div className="container">
         <div className="row">
           <div className="col-xl-12">

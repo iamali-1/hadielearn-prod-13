@@ -34,7 +34,7 @@ const MobileHero2 = () => {
                 <h1>
                   Welcome to <br /> Hadi E-learning
                 </h1>
-                <p>Quality IT training in Pakistan.</p>
+                <p>Transform your future with free IT training. Elevate your skill set with training in futuristic fields.</p>
                 <Link href="/programs" className="z-btn">
                   Explore Programs
                 </Link>

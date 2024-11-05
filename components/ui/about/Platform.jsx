@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const Platform = () => {
   return (
-    <section id="about" className="pt-80 pb-100 p-relative">
+    <section id="about" className="pt-50 p-relative">
       <div className="container">
         <div className="about__area-2 pt-0">
           <div className="row pt-4">

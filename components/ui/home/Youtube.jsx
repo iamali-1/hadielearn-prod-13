@@ -8,6 +8,7 @@ const Youtube = () => {
 
   return (
     <div style={{
+      paddingTop: "70px",
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'flex-start',

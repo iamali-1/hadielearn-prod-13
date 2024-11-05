@@ -18,10 +18,11 @@ const Testimonials = () => {
       >
         <div className="container ">
 
-          <div className="section__title section__title-3 mb-30">
-            <span className="">Testimonials</span>
-            <h2 className="">What students are saying</h2>
-          </div>
+        <div className="section__title section__title-3 mb-30">
+  <span style={{ fontSize: '2.5rem', fontWeight: 'bold' }}>Testimonials</span>
+  <h2 style={{ fontSize: '1.5rem', marginTop: '10px' }}>What students are saying</h2>
+</div>
+
 
           <div className="mb-15">
             <Marquee gradient={false} speed={60} pauseOnHover={true} pauseOnClick={true} delay={0} play={true} direction="right">
