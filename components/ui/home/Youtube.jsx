@@ -20,8 +20,9 @@ const Youtube = () => {
       {videos.map((videoSrc, index) => (
         <div key={index} style={{
           position: 'relative',
-          width: '560px', // Increased width for larger tiles
-          height: '315px', // Increased height for larger tiles
+          width: '100%', // Make the container full width on smaller screens
+          maxWidth: '560px', // Keep a max-width for larger screens
+          height: '315px', // Set a fixed height
           overflow: 'hidden',
           borderRadius: '8px',
           boxShadow: '0 4px 16px rgba(0, 0, 0, 0.2)',
@@ -45,7 +46,17 @@ const Youtube = () => {
         </div>
       ))}
     </div>
-    
+
+    <style jsx>{`
+      @media (max-width: 768px) {
+        div {
+          margin: 20px 10px; /* Reduce margin on mobile */
+        }
+        iframe {
+          border-radius: 0; /* Remove border radius for better fit on mobile */
+        }
+      }
+    `}</style>
     </>
   );
 };

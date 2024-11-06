@@ -33,7 +33,7 @@ const Footer = () => {
                         />
                       </a>
                     </div>
-                    <div id="small" className="logo ">
+                    <div id="small" className="logo">
                       <a href="#">
                         <img
                           src="/images/header.svg"
@@ -45,16 +45,15 @@ const Footer = () => {
                   </div>
                 </div>
               </div>
-              {/* ends */}
 
-              {/* seconds col */}
+              {/* second col */}
               <div className="col-xl-2 offset-xl-1 col-lg-2 offset-lg-1 col-md-4 col-sm-6">
                 <div
                   className="footer__widget footer__widget-3 mb-45 wow fadeInUp"
                   data-wow-delay=".4s"
                 >
                   <div className="footer__widget-title">
-                    <h3 style={{color: "#0f3f5d" }}>MENU</h3>
+                    <h3 style={{ color: "#0f3f5d" }}>MENU</h3>
                   </div>
                   <div className="footer__widget-content">
                     <div className="footer__links">
@@ -93,7 +92,7 @@ const Footer = () => {
                   data-wow-delay=".6s"
                 >
                   <div className="footer__widget-title">
-                    <h3 style={{color: "#0f3f5d" }}>Terms</h3>
+                    <h3 style={{ color: "#0f3f5d" }}>Terms</h3>
                   </div>
                   <div className="footer__widget-content">
                     <div className="footer__links">
@@ -120,51 +119,105 @@ const Footer = () => {
                 </div>
               </div>
 
-              {/* fouth col */}
-              <div className="col-xl-3  col-lg-3 col-md-4 col-sm-6">
+              {/* fourth col (Contact) */}
+              <div
+                className="col-xl-3 col-lg-3 col-md-4 col-sm-6"
+                style={{
+                  paddingLeft: "15px",  // Add padding to the left for mobile view
+                  paddingRight: "0",
+                  paddingTop: "10px",
+                }}
+              >
                 <div
-                  className="footer__widget footer__widget-3 mb-10  ml-70 wow fadeInUp"
+                  className="footer__widget footer__widget-3 mb-10 wow fadeInUp"
                   data-wow-delay=".8s"
                 >
                   <div className="footer__widget-title">
-                    <h3 style={{color: "#0f3f5d" }}>Contact</h3>
+                    <h3 style={{ color: "#0f3f5d" }}>Contact</h3>
                   </div>
                   <div className="footer__widget-content">
                     <div className="footer__info mb-35">
-                      <ul>
-                      <li>
-  <div className="icon theme-color" style={{ display: 'inline-block', marginRight: '15px' }}>
-    <i>
-      <FaEnvelope />
-    </i>
-  </div>
-  <div className="text theme-color" style={{ display: 'inline-block' }}>
-    <span>
-      <a href="mailto:info@hadielearning.com">
-        info@hadielearning.com
-      </a>
-    </span>
-  </div>
-</li>
-
-
-                        <li>
-                          <div className="icon theme-color">
-                            <i>
-                              <FaPhoneAlt />
-                            </i>
+                      <ul
+                        style={{
+                          listStyleType: "none",
+                          paddingLeft: "0",
+                          marginBottom: "0",
+                        }}
+                      >
+                        <li
+                          style={{
+                            display: "flex",
+                            alignItems: "center",
+                            marginBottom: "15px",
+                          }}
+                        >
+                          <div
+                            className="icon theme-color"
+                            style={{
+                              marginRight: "15px",
+                            }}
+                          >
+                            <FaEnvelope />
                           </div>
                           <div className="text theme-color">
                             <span>
-                              <a href="tel:03-1111-93339">+92 311 1193339</a>
+                              <a
+                                href="mailto:info@hadielearning.com"
+                                style={{
+                                  color: "#0f3f5d",
+                                  textDecoration: "none",
+                                }}
+                              >
+                                info@hadielearning.com
+                              </a>
                             </span>
                           </div>
                         </li>
-                        <li>
-                          <div className="icon theme-color">
-                            <i>
-                              <FaWhatsapp />
-                            </i>
+
+                        <li
+                          style={{
+                            display: "flex",
+                            alignItems: "center",
+                            marginBottom: "15px",
+                          }}
+                        >
+                          <div
+                            className="icon theme-color"
+                            style={{
+                              marginRight: "15px",
+                            }}
+                          >
+                            <FaPhoneAlt />
+                          </div>
+                          <div className="text theme-color">
+                            <span>
+                              <a
+                                href="tel:03-1111-93339"
+                                style={{
+                                  color: "#0f3f5d",
+                                  textDecoration: "none",
+                                }}
+                              >
+                                +92 311 1193339
+                              </a>
+                            </span>
+                          </div>
+                        </li>
+
+                        <li
+                          style={{
+                            display: "flex",
+                            alignItems: "center",
+                            marginBottom: "15px",
+                          }}
+                        >
+                          <div
+                            className="icon theme-color"
+                            style={{
+                              marginRight: "15px",
+                            }}
+                          >
+                            <FaWhatsapp />
                           </div>
                           <div className="text theme-color">
                             <span>
@@ -172,6 +225,10 @@ const Footer = () => {
                                 href="https://wa.me/923173174082"
                                 target="_blank"
                                 rel="noopener noreferrer"
+                                style={{
+                                  color: "#0f3f5d",
+                                  textDecoration: "none",
+                                }}
                               >
                                 +92 317 3174082
                               </a>
@@ -179,61 +236,73 @@ const Footer = () => {
                           </div>
                         </li>
 
-                        <li>
-  <div className="icon theme-color" style={{ display: 'inline-block', marginRight: '14px' }}>
-    <i>
-      <CiLocationOn />
-    </i>
-  </div>
-  <div className="text theme-color" style={{ display: 'inline-block' }}>
-    <span>
-      Hadi E-Learning, Civic Center, Faisal Town Lahore.
-    </span>
-  </div>
-</li>
-
+                        <li
+                          style={{
+                            display: "flex",
+                            alignItems: "center",
+                            marginBottom: "15px",
+                          }}
+                        >
+                          <div
+                            className="icon theme-color"
+                            style={{
+                              marginRight: "15px",
+                            }}
+                          >
+                            <CiLocationOn />
+                          </div>
+                          <div className="text theme-color">
+                            <span>
+                              Hadi E-Learning, Civic Center, Faisal Town Lahore.
+                            </span>
+                          </div>
+                        </li>
                       </ul>
                     </div>
+
+                    {/* Footer social */}
                     <div className="footer__social theme-social">
-                      <ul>
-                        <li>
+                      <ul
+                        style={{
+                          display: "flex",
+                          justifyContent: "center",
+                          paddingLeft: "0",
+                        }}
+                      >
+                        <li
+                          style={{
+                            margin: "0 10px",
+                          }}
+                        >
                           <a
-                            href="https://www.facebook.com/Hadielearningofficial "
-                            target="_"
+                            href="https://www.facebook.com/Hadielearningofficial"
+                            target="_blank"
                           >
-                            <i>
-                              <FaFacebookF />
-                            </i>
-                            <i>
-                              <FaFacebookF />
-                            </i>
+                            <FaFacebookF style={{ color: "#0f3f5d" }} />
                           </a>
                         </li>
-                        <li>
+                        <li
+                          style={{
+                            margin: "0 10px",
+                          }}
+                        >
                           <a
                             href="https://instagram.com/hadielearningofficial"
-                            target="_"
+                            target="_blank"
                           >
-                            <i>
-                              <FaInstagram />{" "}
-                            </i>
-                            <i>
-                              <FaInstagram />{" "}
-                            </i>
+                            <FaInstagram style={{ color: "#0f3f5d" }} />
                           </a>
                         </li>
-
-                        <li>
+                        <li
+                          style={{
+                            margin: "0 10px",
+                          }}
+                        >
                           <a
-                            href="https://www.linkedin.com/company/hadi-e-learning/ "
-                            target="_"
+                            href="https://www.linkedin.com/company/hadi-e-learning/"
+                            target="_blank"
                           >
-                            <i>
-                              <FaLinkedin />
-                            </i>
-                            <i>
-                              <FaLinkedin />
-                            </i>
+                            <FaLinkedin style={{ color: "#0f3f5d" }} />
                           </a>
                         </li>
                       </ul>
