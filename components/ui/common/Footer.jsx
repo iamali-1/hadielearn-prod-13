@@ -14,7 +14,7 @@ const Footer = () => {
   return (
     <footer>
       <div className="footer__area pt-50" style={{ background: "#8080801c" }}>
-        <div className="footer__top pb-45">
+        <div className="footer__top ">
           <div className="container">
             <div className="row">
               {/* first col */}

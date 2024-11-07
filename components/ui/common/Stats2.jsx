@@ -130,7 +130,7 @@ const Stats2 = ({ from = "homepage", stats }) => {
           <CounterBox
             from={from}
             counter={from === "admins" ? 4015 : 4105}
-            title="Certified students"
+            title="Certified Students"
             Icon={<AiOutlineSafetyCertificate size={50} />}
           />
           <CounterBox

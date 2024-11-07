@@ -27,7 +27,7 @@ const Stats = () => {
           <h3 className="mt-2 textColor">
             <b>3000 +</b>
           </h3>
-          <small>Students on waitlist</small>
+          <small>Students on Waitlist</small>
         </div>
         <div className="col-6 col-md-3 p-3 d-flex flex-column align-items-center">
           <CiCircleQuestion className="stats-icon" />

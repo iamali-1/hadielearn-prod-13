@@ -17,15 +17,18 @@ const HomeAbout = () => {
           <div className="row">
             <div className="col-xl-7 col-lg-6">
               <div className="about__thumb-2 p-relative m-img text-center">
-                <Image width={600} height={500} src="/images/about/compress/about.webp" alt="" id="about_mascot" />
+                <Image width={600} height={500} layout="responsive" src="/images/about/compress/about.webp" alt="" id="about_mascot" />
               </div>
             </div>
             <div className="col-xl-5 col-lg-6">
               <div className="about__content">
                 <div className="section__title section__title-3 mb-25">
-                  <h2 style={{color: "#0f3f5d" }}>Get to know Hadi</h2>
+                  <h2 style={{color: "#0f3f5d", paddingLeft:"10px", paddingRight:"10px" }}>Get to know Hadi</h2>
                 </div>
-                <p>
+                <p style={{
+                  paddingLeft:"10px",
+                  paddingRight:"10px"
+                }}>
                   Meet our mascot, Hadi. Hadi is your digital leader and will lead you through specially structured computer short courses that will not only enhance your IT skills
                   but will also help you navigate efficiency through your career path.
                   <br />
@@ -35,7 +38,7 @@ const HomeAbout = () => {
                   anyone else in the world.
                   <br /> So join hands with Hadi today, and unlock the door to many shiny prospects in this modern digital world.
                 </p>
-                <Link href="/about-us">
+                <Link style={{paddingLeft:"40px"}} href="/about-us">
                   <span className="z-btn">
                     Get to know Hadi better
                     <i>
