@@ -15,7 +15,7 @@ export const test_links = [
     _id: "648b0c6be81d0fcb77a78784",
     title: "WordPress Mastery Course",
     slug: "wordpress-mastery-course",
-    test: https://www.proprofs.com/quiz-school/ugc/story.php?title=wordpress-mastery-course-evaluation-quiz,
+    test: "https://www.proprofs.com/quiz-school/ugc/story.php?title=wordpress-mastery-course-evaluation-quiz",
   },
   {
     _id: "648b0d35e81d0fcb77a7879b",
@@ -118,7 +118,8 @@ export const test_links = [
     id: "65f3ff2a91ba9bb56e00d605",
     title: "Data Analysis with Microsoft Power BI",
     slug: "data-analysis-with-microsoft-power-bi",
-    test: "https://sawal.co/attempt-quiz/6656d2e9b2f2bc346ce344f3/66bb6172bb18cf8063a70ae8",
+    test: "https://www.proprofs.com/quiz-school/ugc/story.php?title=data-analysis-with-ms-power-bi",
+//    test: "https://sawal.co/attempt-quiz/6656d2e9b2f2bc346ce344f3/66bb6172bb18cf8063a70ae8",
   },
 
   {
@@ -139,13 +140,15 @@ export const test_links = [
     id: "6699fdf6dfd3304181758917",
     title: "Canva - 14 Days Crash Course",
     slug: "canva-14-days-crash-course",
-    test: "https://sawal.co/attempt-quiz/6656d2e9b2f2bc346ce344f3/66bdfc810d73734a51eb1f5a",
+    test: "https://www.proprofs.com/quiz-school/ugc/story.php?title=nda0otuwoazg4l",
+//    test: "https://sawal.co/attempt-quiz/6656d2e9b2f2bc346ce344f3/66bdfc810d73734a51eb1f5a",
   },
 
   {
     id: "66b4b5ea775fb8d33accaf94",
     title: "Fundamentals of DevOps",
     slug: "fundamentals-of-devops",
-    test: "https://sawal.co/attempt-quiz/6656d2e9b2f2bc346ce344f3/66bb4140bb18cf8063a701c5",
+    test: "https://www.proprofs.com/quiz-school/ugc/story.php?title=fundamentals-of-devops",
+//    test: "https://sawal.co/attempt-quiz/6656d2e9b2f2bc346ce344f3/66bb4140bb18cf8063a701c5",
   },
 ];
