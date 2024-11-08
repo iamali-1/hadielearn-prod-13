@@ -2,8 +2,8 @@ import React from 'react';
 
 const Youtube = () => {
   const videos = [
-    { src: 'https://www.youtube.com/embed/U7bexe8MyLI?autoplay=1', title: 'One Year of Hadi E-Learning' },
-    { src: 'https://www.youtube.com/embed/pKLH8jcJUEI', title: 'How to Enroll in Hadi E-Learning' },
+    { src: 'https://www.youtube.com/embed/U7bexe8MyLI?autoplay=1' },
+    { src: 'https://www.youtube.com/embed/pKLH8jcJUEI' },
   ];
 
   return (
@@ -50,7 +50,6 @@ const Youtube = () => {
                 allowFullScreen
               ></iframe>
             </div>
-            <h2 style={{ marginTop: '80px', textAlign: 'center', color: "#0f3f5d" }}>{video.title}</h2>
           </div>
         ))}
       </div>
@@ -63,16 +62,11 @@ const Youtube = () => {
           iframe {
             border-radius: 0; /* Remove border radius for better fit on mobile */
           }
-          h3 {
-            font-size: 16px; /* Smaller font size on mobile */
-            margin-top: 8px; /* Adjust margin for h3 on mobile */
-          }
         }
         
         @media (min-width: 769px) {
-          h3 {
-            font-size: 18px; /* Adjust font size for desktop */
-            margin-top: 15px; /* Adjust margin for h3 on desktop */
+          iframe {
+            border-radius: 8px; /* Keep border radius for desktop */
           }
         }
       `}</style>
