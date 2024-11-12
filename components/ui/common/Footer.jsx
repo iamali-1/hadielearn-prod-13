@@ -14,7 +14,7 @@ const Footer = () => {
   return (
     <footer>
       <div className="footer__area pt-50" style={{ background: "#8080801c" }}>
-        <div className="footer__top ">
+        <div className="footer__top">
           <div className="container">
             <div className="row">
               {/* first col */}
@@ -47,7 +47,7 @@ const Footer = () => {
               </div>
 
               {/* second col */}
-              <div className="col-xl-2 offset-xl-1 col-lg-2 offset-lg-1 col-md-4 col-sm-6">
+              <div className="col-xl-2 col-lg-2 col-md-4 col-sm-6 offset-xl-1 offset-lg-1">
                 <div
                   className="footer__widget footer__widget-3 mb-45 wow fadeInUp"
                   data-wow-delay=".4s"
@@ -86,7 +86,7 @@ const Footer = () => {
               </div>
 
               {/* third col */}
-              <div className="col-xl-2 offset-xl-1 col-lg-2 offset-lg-1 col-md-4 col-sm-6">
+              <div className="col-xl-2 col-lg-2 col-md-4 col-sm-6 offset-xl-1 offset-lg-1">
                 <div
                   className="footer__widget mb-45 wow fadeInUp"
                   data-wow-delay=".6s"
@@ -120,16 +120,9 @@ const Footer = () => {
               </div>
 
               {/* fourth col (Contact) */}
-              <div
-                className="col-xl-3 col-lg-3 col-md-4 col-sm-6"
-                style={{
-                  paddingLeft: "15px", // Add padding to the left for mobile view
-                  paddingRight: "0",
-                  paddingTop: "10px",
-                }}
-              >
+              <div className="col-xl-3 col-lg-3 col-md-4 col-sm-6">
                 <div
-                  className="footer__widget footer__widget-3 mb-10 wow fadeInUp"
+                  className="footer__widget footer__widget-3 mb-45 wow fadeInUp"
                   data-wow-delay=".8s"
                 >
                   <div className="footer__widget-title">
@@ -289,7 +282,7 @@ const Footer = () => {
                             href="https://www.facebook.com/Hadielearningofficial"
                             target="_blank"
                           >
-                            <FaFacebookF  />
+                            <FaFacebookF />
                           </a>
                         </li>
                         <li
@@ -301,7 +294,7 @@ const Footer = () => {
                             href="https://instagram.com/hadielearningofficial"
                             target="_blank"
                           >
-                            <FaInstagram  />
+                            <FaInstagram />
                           </a>
                         </li>
                         <li
@@ -313,7 +306,7 @@ const Footer = () => {
                             href="https://www.linkedin.com/company/hadi-e-learning/"
                             target="_blank"
                           >
-                            <FaLinkedin/>
+                            <FaLinkedin />
                           </a>
                         </li>
                       </ul>
