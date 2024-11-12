@@ -8,7 +8,7 @@ const Brands = () => {
           <div className="row">
             <div className="col-xl-6 col-lg-7">
               <div className="section__title section__title-3 wow fadeInUp" data-wow-delay=".2s">
-                <h2 style={{ fontSize: '2.5rem', fontWeight: 'bold', color: "#0f3f5d" }}>Our Partners</h2>
+                <h2 style={{ fontSize: '2.5rem', fontWeight: 'bold', color: "#0f3f5d",paddingLeft:"30px" }}>Our Partners</h2>
               </div>
             </div>
           </div>

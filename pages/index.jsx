@@ -4,7 +4,7 @@ import HomePrograms from "@/components/ui/home/HomePrograms";
 import { useScreens } from "@/components/ui/common/screens";
 import { API } from "@/config/APIs";
 import axios from "axios";
-import React from "react";
+import React, { useEffect } from "react";
 import ResponsiveHero from "@/components/ui/home/ResponsiveHero";
 import HomeAbout from "@/components/ui/home/HomeAbout";
 import CTA from "@/components/ui/common/CTA";
@@ -20,6 +20,13 @@ import Youtube from "@/components/ui/home/Youtube";
 const Home = ({ courses, stats }) => {
   const { screen } = useScreens();
 
+  useEffect(() => {
+    // Initialize Google AdSense
+    if (window.adsbygoogle) {
+      (window.adsbygoogle = window.adsbygoogle || []).push({});
+    }
+  }, []);
+
   return (
     <>
       <Tops
@@ -30,23 +37,57 @@ const Home = ({ courses, stats }) => {
         conLink={"https://hadielearning.com/"}
       />
       <ResponsiveHero />
+
+      {/* Example Ad 1 - After Hero Section */}
+      <div className="ad-container" style={{ margin: '40px 0', textAlign: 'center' }}>
+        <ins
+          className="adsbygoogle"
+          style={{ display: "block" }}
+          data-ad-client="ca-pub-7098252304490801"
+          data-ad-slot="YOUR_AD_SLOT_1"
+          data-ad-format="auto"
+        ></ins>
+      </div>
+
       <div style={{ margin: '40px 0' }}>
         <Youtube />
       </div>
+
       {stats && <Stats2 stats={stats} />}
       {/* <HomeAboutFeatures /> */}
       <HomeAbout />
-      {/* <CourseCats /> */}
+
+      {/* Example Ad 2 - Between Sections */}
+      <div className="ad-container" style={{ margin: '40px 0', textAlign: 'center' }}>
+        <ins
+          className="adsbygoogle"
+          style={{ display: "block" }}
+          data-ad-client="ca-pub-7098252304490801"
+          data-ad-slot="YOUR_AD_SLOT_2"
+          data-ad-format="auto"
+        ></ins>
+      </div>
+
       <div style={{ marginTop: screen.md ? "80px" : !screen.md && "80px" }}>
         <HomePrograms courses={courses} />
       </div>
+
       <CTA />
       <Testimonials />
+
+      {/* Example Ad 3 - After Testimonials */}
+      <div className="ad-container" style={{ margin: '40px 0', textAlign: 'center' }}>
+        <ins
+          className="adsbygoogle"
+          style={{ display: "block" }}
+          data-ad-client="ca-pub-7098252304490801"
+          data-ad-slot="YOUR_AD_SLOT_3"
+          data-ad-format="auto"
+        ></ins>
+      </div>
+
       <Brands />
-
       <Footer />
-
-      {/* {JSON.stringify(courses)} */}
     </>
   );
 };

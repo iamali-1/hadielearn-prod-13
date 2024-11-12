@@ -123,7 +123,7 @@ const Footer = () => {
               <div
                 className="col-xl-3 col-lg-3 col-md-4 col-sm-6"
                 style={{
-                  paddingLeft: "15px",  // Add padding to the left for mobile view
+                  paddingLeft: "15px", // Add padding to the left for mobile view
                   paddingRight: "0",
                   paddingTop: "10px",
                 }}
@@ -253,9 +253,20 @@ const Footer = () => {
                           </div>
                           <div className="text theme-color">
                             <span>
-                              Hadi E-Learning, Civic Center, Faisal Town Lahore.
+                              <a
+                                href="https://www.google.com/maps?q=Hadi+E-Learning,+Civic+Center,+Faisal+Town+Lahore"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                style={{
+                                  color: "#0f3f5d",
+                                  textDecoration: "none",
+                                }}
+                              >
+                                Hadi E-Learning, Civic Center, Faisal Town
+                                Lahore.
+                              </a>
                             </span>
-                          </div>
+                          </div>{" "}
                         </li>
                       </ul>
                     </div>
@@ -278,7 +289,7 @@ const Footer = () => {
                             href="https://www.facebook.com/Hadielearningofficial"
                             target="_blank"
                           >
-                            <FaFacebookF style={{ color: "#0f3f5d" }} />
+                            <FaFacebookF  />
                           </a>
                         </li>
                         <li
@@ -290,7 +301,7 @@ const Footer = () => {
                             href="https://instagram.com/hadielearningofficial"
                             target="_blank"
                           >
-                            <FaInstagram style={{ color: "#0f3f5d" }} />
+                            <FaInstagram  />
                           </a>
                         </li>
                         <li
@@ -302,7 +313,7 @@ const Footer = () => {
                             href="https://www.linkedin.com/company/hadi-e-learning/"
                             target="_blank"
                           >
-                            <FaLinkedin style={{ color: "#0f3f5d" }} />
+                            <FaLinkedin/>
                           </a>
                         </li>
                       </ul>

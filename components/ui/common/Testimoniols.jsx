@@ -19,8 +19,8 @@ const Testimonials = () => {
         <div className="container ">
 
         <div className="section__title section__title-3 mb-60">
-  <span style={{ fontSize: '2.5rem', fontWeight: 'bold' }}>Testimonials</span>
-  <h2 style={{ fontSize: '1.5rem', marginTop: '10px' , color: "#0f3f5d" }}>What students are saying</h2>
+  <span style={{ fontSize: '2.5rem', fontWeight: 'bold', paddingLeft:"20px" }}>Testimonials</span>
+  <h2 style={{ fontSize: '1.5rem', marginTop: '10px' , color: "#0f3f5d", paddingLeft:"20px" }}>What students are saying</h2>
 </div>
 
 
